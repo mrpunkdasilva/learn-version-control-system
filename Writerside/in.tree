@@ -3,7 +3,7 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 
 <instance-profile id="in"
-                  name="Operating System">
+                  name="Operating System" start-page="SistemasOperacionais.md">
 
     <toc-element toc-title="Starter">
         <toc-element toc-title="Domus 1">
