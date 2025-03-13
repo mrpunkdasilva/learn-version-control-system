@@ -1,4 +1,4 @@
-# Exercícios Práticos Resolvidos
+# Exercícios Práticos Resolvidos - 1
 
 ### **1.1. Quais são as três principais finalidades de um sistema operacional?**
 1. **Gerenciamento de recursos**: Controlar e alocar hardware (CPU, memória, dispositivos de E/S) para programas.

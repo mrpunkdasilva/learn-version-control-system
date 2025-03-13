@@ -1,4 +1,4 @@
-# Exercícios Práticos Resolvidos
+# Exercícios Práticos Resolvidos - 2
 
 ### **2.1. Qual é o propósito das chamadas do sistema?**
 - **Resposta**: As chamadas do sistema (system calls) são interfaces que permitem que programas de usuário solicitem serviços ao sistema operacional. Elas atuam como uma ponte entre o software de aplicação e o hardware, permitindo que os programas realizem operações como leitura/escrita de arquivos, criação de processos, comunicação entre processos e acesso a dispositivos de hardware.
