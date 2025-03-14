@@ -3,42 +3,7 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 
 <instance-profile id="in"
-                  name="Operating System" start-page="SistemasOperacionais.md">
+                  name="Learn Version Control System" start-page="Version-Control-System.md">
 
-    <toc-element toc-title="Starter">
-        <toc-element toc-title="Domus 1">
-            <toc-element topic="SistemasOperacionais.md"/>
-            <toc-element topic="1-1.md">
-                <toc-element topic="Hardware.md"/>
-                <toc-element topic="Software.md"/>
-                <toc-element topic="1-2.md"/>
-            </toc-element>
-            <toc-element topic="1-6-Estrutura-do-sistema-operacional.md"/>
-            <toc-element topic="1-7-Operações-do-Computador.md"/>
-            <toc-element topic="1-6-Gerência-de-processos.md"/>
-            <toc-element topic="1-9-Gerência-de-memória.md"/>
-            <toc-element topic="1-10-Gerência-de-armazenamento.md"/>
-            <toc-element topic="1-11-Proteção-e-segurança.md"/>
-            <toc-element topic="1-12-Sistemas-de-uso-específico.md"/>
-            <toc-element topic="Ambientes-de-Computação.md"/>
-            <toc-element topic="1-14.md"/>
-            <toc-element topic="Exercícios-Práticos-Resolvidos.md"/>
-        </toc-element>
-        <toc-element topic="Capitulo-2.md">
-            <toc-element topic="2-2-Interface-usuário-sistema-operacional.md"/>
-            <toc-element topic="2-3-Chamadas-de-sistema.md"/>
-            <toc-element topic="2-4-Tipos-de-chamadas-de-sistema.md"/>
-            <toc-element topic="2-5-Programas-do-sistema.md"/>
-            <toc-element topic="2-6-Projeto-e-implementação-do-sistema-operacional.md"/>
-            <toc-element topic="2-8-Máquinas-virtuais.md"/>
-            <toc-element topic="2-7-Geração-do-sistema-operacional.md"/>
-            <toc-element topic="2-9-Boot-do-sistema.md"/>
-            <toc-element topic="Exercicios-Práticos-Resolvidos.md"/>
-        </toc-element>
-        <toc-element topic="Prática.md"/>
-        <toc-element topic="Questões.md"/>
-        <toc-element topic="Respostas.md"/>
-    </toc-element>
-    <toc-element topic="Bibliografia.md">
-    </toc-element>
+    <toc-element topic="Version-Control-System.md"/>
 </instance-profile>
