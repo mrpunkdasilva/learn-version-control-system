@@ -2559,6 +2559,1179 @@ mindmap
 
 
 
+# Forking Workflow
+
+Se o Feature Branch é uma festa na casa do Stifler e o Gitflow é o baile de formatura, o Forking Workflow é como organizar vários American Pie ao mesmo tempo - cada um tem sua própria versão, mas todos contribuem para a franquia!
+
+## O que é Fork?
+
+```MERMAID
+graph TD
+    A[Repositório Original] -->|Fork| B[Seu Fork]
+    A -->|Fork| C[Fork Dev 2]
+    A -->|Fork| D[Fork Dev 3]
+    B -->|Pull Request| A
+    C -->|Pull Request| A
+    D -->|Pull Request| A
+```
+
+## Fluxo Básico
+
+```MERMAID
+sequenceDiagram
+    participant O as Repo Original
+    participant F as Seu Fork
+    participant L as Local
+    O->>F: Fork
+    F->>L: Clone
+    L->>L: Desenvolvimento
+    L->>F: Push
+    F->>O: Pull Request
+```
+
+## Estrutura do Workflow
+
+### 1. Setup Inicial
+
+```BASH
+# Fork via interface do GitHub/GitLab
+
+# Clone do seu fork
+git clone https://github.com/seu-usuario/projeto.git
+
+# Adicionar upstream
+git remote add upstream https://github.com/projeto-original/projeto.git
+```
+
+### 2. Mantendo Sincronizado
+
+```MERMAID
+graph LR
+    A[Upstream/Original] -->|Fetch| B[Seu Fork]
+    B -->|Merge| C[Suas Changes]
+    C -->|Push| B
+```
+
+## Ciclo de Desenvolvimento
+
+### 1. Atualizando seu Fork
+
+```BASH
+# Buscar mudanças do original
+git fetch upstream
+
+# Atualizar sua main
+git checkout main
+git merge upstream/main
+```
+
+### 2. Feature Development
+
+```MERMAID
+gitGraph
+    commit
+    branch feature/nova
+    checkout feature/nova
+    commit
+    commit
+    checkout main
+    merge feature/nova
+    commit
+```
+
+## Processo de Contribuição
+
+### 1. Preparando o Pull Request
+
+```MERMAID
+mindmap
+    root((Pull Request))
+        Código Limpo
+            Formatação
+            Lint
+        Testes
+            Unitários
+            Integração
+        Documentação
+            README
+            Comentários
+```
+
+### 2. Fluxo de Review
+
+```MERMAID
+sequenceDiagram
+    participant D as Dev
+    participant M as Maintainer
+    participant O as Original
+    D->>M: Pull Request
+    M->>M: Review
+    M->>D: Feedback
+    D->>M: Updates
+    M->>O: Merge
+```
+
+## Boas Práticas
+
+### 1. Organização de Branches
+
+```
+origem/
+  ├── main
+  └── feature/
+      ├── nova-funcionalidade
+      └── bugfix-importante
+
+seu-fork/
+  ├── main
+  └── feature/
+      └── sua-contribuicao
+```
+
+### 2. Commits Organizados
+
+```MERMAID
+gitGraph
+    commit id: "docs: atualiza README"
+    commit id: "feat: nova função"
+    commit id: "test: adiciona testes"
+    commit id: "fix: corrige bug"
+```
+
+## Vantagens do Forking
+
+```MERMAID
+mindmap
+    root((Benefícios))
+        Isolamento
+            Experimentos Seguros
+            Sem Afetar Original
+        Controle
+            Review Rigoroso
+            Qualidade Código
+        Colaboração
+            Comunidade Ampla
+            Múltiplos Times
+```
+
+## Desafios Comuns
+
+### 1. Sincronização
+
+```MERMAID
+graph TD
+    A[Conflitos] -->|Resolve| B[Merge]
+    C[Desatualizado] -->|Update| D[Sync]
+    E[Divergência] -->|Rebase| F[Align]
+```
+
+### 2. Checklist de Contribuição
+
+```
+📋 Antes do PR:
+
+1. [ ] Fork atualizado
+2. [ ] Código testado
+3. [ ] Docs atualizados
+4. [ ] Commits organizados
+5. [ ] Branch limpa
+```
+
+## Ferramentas Úteis
+
+### 1. GitHub/GitLab Features
+
+```MERMAID
+mindmap
+    root((Tools))
+        Interface Web
+            Fork Button
+            PR Templates
+        Automação
+            CI/CD
+            Checks
+        Colaboração
+            Reviews
+            Discussions
+```
+
+### 2. Comandos Essenciais
+
+```BASH
+# Sincronizar com upstream
+git fetch upstream
+git merge upstream/main
+
+# Atualizar fork remoto
+git push origin main
+
+# Criar feature
+git checkout -b feature/nova
+```
+
+## Dicas de Sucesso
+
+### 1. Comunicação
+
+```MERMAID
+mindmap
+    root((Comunicação))
+        Issues
+            Discutir Antes
+            Planejar Mudanças
+        PR Description
+            Contexto Claro
+            Screenshots
+        Feedback
+            Construtivo
+            Respeitoso
+```
+
+### 2. Manutenção
+
+```
+🔄 Rotina de Manutenção
+
+Daily:
+  - Sync com upstream
+  - Review PRs
+  - Responder issues
+
+Weekly:
+  - Cleanup branches
+  - Update docs
+  - Check stale PRs
+```
+
+## Conclusão
+
+O Forking Workflow é como criar seu próprio American Pie enquanto contribui para a saga original - você tem liberdade criativa, mas precisa manter a essência que fez a franquia um sucesso!
+
+```MERMAID
+mindmap
+    root((Fork Success))
+        Preparação
+            Fork Atualizado
+            Ambiente Config
+        Execução
+            Código Limpo
+            Testes OK
+        Contribuição
+            PR Claro
+            Feedback Loop
+```
+
+
+
+# Gerenciamento de Releases
+
+Como diria o Stifler: "Uma release é como uma festa - precisa de planejamento, organização e saber a hora certa de lançar!"
+
+## Fundamentos de Release Management
+
+### 1. Ciclo de Release
+
+```MERMAID
+graph LR
+    A[Planejamento] --> B[Desenvolvimento]
+    B --> C[Testes]
+    C --> D[Preparação]
+    D --> E[Lançamento]
+    E --> F[Monitoramento]
+```
+
+### 2. Tipos de Release
+
+```MERMAID
+mindmap
+    root((Releases))
+        Major
+            Breaking Changes
+            Novas Arquiteturas
+        Minor
+            Novas Features
+            Compatível
+        Patch
+            Hotfixes
+            Bugfixes
+```
+
+## Versionamento Semântico
+
+### 1. Estrutura
+
+```
+MAJOR.MINOR.PATCH
+  |     |     |
+  |     |     `-- Correções de bugs
+  |     `-------- Novas funcionalidades
+  `-------------- Breaking changes
+```
+
+### 2. Exemplos Práticos
+
+```MERMAID
+graph TD
+    A[1.0.0] -->|Nova Feature| B[1.1.0]
+    B -->|Bugfix| C[1.1.1]
+    C -->|Breaking Change| D[2.0.0]
+```
+
+## Processo de Release
+
+### 1. Preparação
+
+```MERMAID
+sequenceDiagram
+    participant D as Develop
+    participant R as Release Branch
+    participant M as Main
+    D->>R: Branch Release
+    R->>R: Testes
+    R->>R: Docs
+    R->>M: Merge
+```
+
+### 2. Checklist de Release
+
+```
+📋 Release Checklist
+
+1. [ ] Code Freeze
+2. [ ] Versão Atualizada
+3. [ ] Testes Completos
+4. [ ] Documentação
+5. [ ] Release Notes
+6. [ ] Deploy Staging
+7. [ ] Smoke Tests
+8. [ ] Deploy Prod
+9. [ ] Monitoramento
+10.[ ] Comunicação
+```
+
+## Estratégias de Release
+
+### 1. Release Tradicional
+
+```MERMAID
+gitGraph
+    commit
+    branch release/1.0
+    checkout release/1.0
+    commit id: "prep"
+    commit id: "test"
+    checkout main
+    merge release/1.0
+    commit id: "tag v1.0"
+```
+
+### 2. Continuous Delivery
+
+```MERMAID
+sequenceDiagram
+    participant F as Feature
+    participant T as Testes
+    participant S as Staging
+    participant P as Prod
+    F->>T: Auto Tests
+    T->>S: Auto Deploy
+    S->>P: Manual Approve
+```
+
+## Ambientes de Deploy
+
+### 1. Pipeline de Ambientes
+
+```MERMAID
+graph LR
+    A[Dev] --> B[QA]
+    B --> C[Staging]
+    C --> D[Production]
+```
+
+### 2. Configuração por Ambiente
+
+```
+environments/
+├── dev/
+│   └── config.yml
+├── qa/
+│   └── config.yml
+├── staging/
+│   └── config.yml
+└── prod/
+    └── config.yml
+```
+
+## Documentação de Release
+
+### 1. Release Notes
+
+```MERMAID
+mindmap
+    root((Release Notes))
+        Novidades
+            Features
+            Melhorias
+        Correções
+            Bugs
+            Performance
+        Breaking Changes
+            Migrações
+            Updates
+```
+
+### 2. Changelog
+
+```
+# Changelog
+
+## [2.0.0] - 2024-02-20
+### Added
+- Nova interface
+- API v2
+
+### Changed
+- Refatoração do core
+
+### Fixed
+- Bug #123
+- Performance issue
+```
+
+## Comunicação
+
+### 1. Stakeholders
+
+```MERMAID
+mindmap
+    root((Comunicação))
+        Interno
+            Dev Team
+            Suporte
+        Externo
+            Usuários
+            Clientes
+```
+
+### 2. Canais de Comunicação
+
+```
+📢 Canais
+
+- Email Newsletter
+- Blog Técnico
+- Redes Sociais
+- Documentação
+- Release Notes
+```
+
+## Monitoramento Pós-Release
+
+### 1. Métricas Importantes
+
+```MERMAID
+graph TD
+    A[Performance] --> E[Monitoramento]
+    B[Erros] --> E
+    C[Usage] --> E
+    D[Feedback] --> E
+```
+
+### 2. Plano de Rollback
+
+```MERMAID
+sequenceDiagram
+    participant P as Prod
+    participant B as Backup
+    participant R as Rollback
+    P->>B: Backup
+    P->>P: Deploy
+    P->>P: Monitor
+    P->>R: Se Necessário
+```
+
+## Automação
+
+### 1. CI/CD Pipeline
+
+```MERMAID
+graph LR
+    A[Build] --> B[Test]
+    B --> C[Package]
+    C --> D[Deploy]
+    D --> E[Monitor]
+```
+
+### 2. Scripts de Release
+
+```BASH
+# Exemplo de script de release
+./release.sh \
+  --version="1.2.0" \
+  --env="prod" \
+  --backup \
+  --notify
+```
+
+## Melhores Práticas
+
+### 1. Planejamento
+
+```MERMAID
+mindmap
+    root((Best Practices))
+        Timing
+            Horários Baixo Uso
+            Janelas Manutenção
+        Backup
+            Dados
+            Configurações
+        Testes
+            Regressão
+            Performance
+```
+
+### 2. Checklist de Segurança
+
+```
+🔒 Security Checklist
+
+1. [ ] Backups atualizados
+2. [ ] Secrets rotacionadas
+3. [ ] Permissões verificadas
+4. [ ] Logs habilitados
+5. [ ] Monitoramento ativo
+```
+
+## Conclusão
+
+Como em American Pie, o timing é tudo! Uma release bem executada é como uma festa perfeita - todos se divertem e nada dá errado (ou pelo menos sabemos como lidar quando dá).
+
+```MERMAID
+mindmap
+    root((Release Success))
+        Preparação
+            Planejamento
+            Testes
+        Execução
+            Deploy Suave
+            Monitoramento
+        Pós-Release
+            Feedback
+            Ajustes
+```
+
+
+
+# Estratégias de Hotfix
+
+Como o Stifler diria: "Bugs em produção são como aquela festa que começa a dar errado - você precisa agir rápido e com precisão!"
+
+## Anatomia de um Hotfix
+
+### 1. Fluxo Básico
+
+```MERMAID
+graph TD
+    A[Bug em Prod] -->|Branch| B[Hotfix Branch]
+    B -->|Fix| C[Teste]
+    C -->|Deploy| D[Prod]
+    D -->|Merge| E[Main/Master]
+    E -->|Sync| F[Develop]
+```
+
+### 2. Estrutura de Branch
+
+```
+main/master
+    |
+    |--hotfix/bug-123
+    |     |
+    |     `-- fix
+    |
+    `-- merge
+```
+
+## Tipos de Hotfix
+
+### 1. Por Severidade
+
+```MERMAID
+mindmap
+    root((Hotfix Types))
+        Critical
+            Security
+            Data Loss
+        High
+            UX Breaks
+            Core Features
+        Medium
+            Minor Bugs
+            UI Issues
+```
+
+### 2. Por Escopo
+
+```
+🔧 Hotfix Scopes
+
+CRITICAL
+├── Security Patches
+├── Data Corruption
+└── System Crash
+
+URGENT
+├── Business Logic
+├── Payment Issues
+└── Core Features
+
+STANDARD
+├── UI Fixes
+├── Performance
+└── Minor Bugs
+```
+
+## Processo de Hotfix
+
+### 1. Identificação
+
+```MERMAID
+sequenceDiagram
+    participant M as Monitoring
+    participant T as Team
+    participant H as Hotfix
+    M->>T: Alert
+    T->>T: Assess
+    T->>H: Create Branch
+```
+
+### 2. Execução
+
+```MERMAID
+graph LR
+    A[Create Branch] --> B[Fix Bug]
+    B --> C[Test]
+    C --> D[Review]
+    D --> E[Deploy]
+```
+
+### 3. Checklist de Hotfix
+
+```
+🚨 Hotfix Checklist
+
+1. [ ] Identificar causa raiz
+2. [ ] Criar branch hotfix
+3. [ ] Implementar correção
+4. [ ] Testes de regressão
+5. [ ] Code review
+6. [ ] Deploy em staging
+7. [ ] Validação
+8. [ ] Deploy em prod
+9. [ ] Merge em main
+10.[ ] Sync develop
+```
+
+## Comandos Git para Hotfix
+
+### 1. Workflow Git
+
+```BASH
+# Criar hotfix branch
+git checkout -b hotfix/bug-123 main
+
+# Commit fix
+git commit -m "fix: corrige bug crítico #123"
+
+# Merge em main
+git checkout main
+git merge --no-ff hotfix/bug-123
+
+# Sync develop
+git checkout develop
+git merge --no-ff hotfix/bug-123
+```
+
+### 2. Git Flow
+
+```BASH
+# Iniciar hotfix
+git flow hotfix start bug-123
+
+# Finalizar hotfix
+git flow hotfix finish bug-123
+```
+
+## Boas Práticas
+
+### 1. Regras de Ouro
+
+```MERMAID
+mindmap
+    root((Best Practices))
+        Minimal Changes
+            Only Fix
+            No Features
+        Quick Process
+            Fast Review
+            Quick Deploy
+        Documentation
+            Root Cause
+            Solution
+```
+
+### 2. Comunicação
+
+```
+📢 Communication Flow
+
+1. Alert Team
+2. Assess Impact
+3. Plan Fix
+4. Update Status
+5. Deploy Notice
+6. Resolution Note
+```
+
+## Prevenção
+
+### 1. Monitoramento
+
+```MERMAID
+graph TD
+    A[Logs] --> D[Detection]
+    B[Metrics] --> D
+    C[Alerts] --> D
+    D --> E[Quick Response]
+```
+
+### 2. Checklist Preventivo
+
+```
+🛡️ Prevention Checklist
+
+1. [ ] Monitoring setup
+2. [ ] Alert thresholds
+3. [ ] Backup strategy
+4. [ ] Rollback plan
+5. [ ] Team contacts
+```
+
+## Documentação
+
+### 1. Template de Hotfix
+
+```
+🔥 Hotfix Documentation
+
+Issue: #123
+Severity: Critical
+Impact: Payment System
+
+Root Cause:
+- Invalid transaction handling
+
+Fix:
+- Added validation
+- Updated error handling
+
+Testing:
+- Unit tests added
+- Integration verified
+- Staging validated
+```
+
+### 2. Post-Mortem
+
+```MERMAID
+mindmap
+    root((Post-Mortem))
+        What Happened
+            Timeline
+            Impact
+        Resolution
+            Fix
+            Deploy
+        Prevention
+            Lessons
+            Updates
+```
+
+## Automação
+
+### 1. Pipeline de Hotfix
+
+```MERMAID
+graph LR
+    A[Branch] --> B[Build]
+    B --> C[Test]
+    C --> D[Review]
+    D --> E[Deploy]
+```
+
+### 2. Scripts Automatizados
+
+```BASH
+#!/bin/bash
+# hotfix.sh
+
+VERSION=$1
+BRANCH="hotfix/$VERSION"
+
+git checkout -b $BRANCH main
+# run tests
+# deploy staging
+# await approval
+# deploy prod
+```
+
+## Métricas e KPIs
+
+### 1. Indicadores Chave
+
+```MERMAID
+graph TD
+    A[MTTR] --> E[Metrics]
+    B[Frequency] --> E
+    C[Success Rate] --> E
+    D[Impact Time] --> E
+```
+
+### 2. Dashboard
+
+```
+📊 Hotfix Metrics
+
+MTTR: 45min
+Success Rate: 98%
+Frequency: 2/month
+Impact Time: 30min
+```
+
+## Conclusão
+
+Como o Stifler aprendeu: em emergências, mantenha a calma, siga o processo e aja rápido! Um bom processo de hotfix é como ter um extintor de incêndio sempre à mão - você torce para não precisar, mas quando precisa, salva a festa!
+
+```MERMAID
+mindmap
+    root((Hotfix Success))
+        Process
+            Quick
+            Precise
+        Quality
+            Tested
+            Reviewed
+        Follow-up
+            Document
+            Learn
+```
+
+
+
+# Comparando Workflows
+
+Se os workflows fossem festas do American Pie, seria assim:
+
+* Trunk-Based: Festa informal na casa do Jim
+
+* Feature Branch: Festa na casa do Stifler
+
+* Gitflow: Baile de formatura
+
+* Fork: Festival com várias stages
+
+## Visão Geral
+
+```MERMAID
+mindmap
+    root((Workflows))
+        Trunk-Based
+            Simples
+            Rápido
+            Contínuo
+        Feature Branch
+            Isolado
+            Flexível
+            Colaborativo
+        Gitflow
+            Estruturado
+            Versionado
+            Complexo
+        Fork
+            Distribuído
+            Comunidade
+            Independente
+```
+
+## Comparação Detalhada
+
+### 1. Complexidade vs Flexibilidade
+
+```MERMAID
+quadrantChart
+    title Complexidade vs Flexibilidade
+    x-axis Baixa Complexidade --> Alta Complexidade
+    y-axis Baixa Flexibilidade --> Alta Flexibilidade
+    quadrant-1 Ideal
+    quadrant-2 Complexo
+    quadrant-3 Limitado
+    quadrant-4 Simples
+    Trunk-Based: [0.2, 0.3]
+    Feature-Branch: [0.4, 0.6]
+    Gitflow: [0.8, 0.7]
+    Fork: [0.7, 0.9]
+```
+
+### 2. Tabela Comparativa
+
+| Aspecto |Trunk-Based |Feature Branch |Gitflow |Fork |
+-------------------------------------------------------
+| Complexidade |Baixa |Média |Alta |Alta |
+| CI/CD |Excelente |Bom |Moderado |Variável |
+| Review |Rápido |Bom |Detalhado |Comunitário |
+| Releases |Contínuas |Flexíveis |Planejadas |Independentes |
+| Time Size |Pequeno |Médio |Grande |Distribuído |
+
+## Cenários de Uso
+
+### 1. Por Tamanho de Projeto
+
+```MERMAID
+graph TD
+    A[Tamanho Projeto] --> B[Pequeno]
+    A --> C[Médio]
+    A --> D[Grande]
+    B --> E[Trunk-Based]
+    C --> F[Feature Branch]
+    D --> G[Gitflow/Fork]
+```
+
+### 2. Por Tipo de Entrega
+
+```
+📦 Release Strategy Match
+
+Continuous Delivery
+└── Trunk-Based Development
+
+Regular Releases
+├── Feature Branch
+└── Gitflow
+
+Community/Open Source
+└── Fork
+```
+
+## Pontos Fortes
+
+### 1. Trunk-Based
+
+```MERMAID
+mindmap
+    root((Trunk-Based))
+        Velocidade
+            Deploy Rápido
+            CI/CD Eficiente
+        Simplicidade
+            Menos Branches
+            Menos Conflitos
+```
+
+### 2. Feature Branch
+
+```MERMAID
+mindmap
+    root((Feature Branch))
+        Isolamento
+            Desenvolvimento Seguro
+            Testes Independentes
+        Colaboração
+            Code Review
+            Feature Toggle
+```
+
+### 3. Gitflow
+
+```MERMAID
+mindmap
+    root((Gitflow))
+        Organização
+            Branches Definidas
+            Processo Claro
+        Controle
+            Releases Planejadas
+            Hotfix Support
+```
+
+### 4. Fork
+
+```MERMAID
+mindmap
+    root((Fork))
+        Independência
+            Trabalho Isolado
+            Experimentação
+        Comunidade
+            Open Source
+            Contribuições
+```
+
+## Desafios Comuns
+
+### 1. Problemas e Soluções
+
+```
+🎯 Workflow Challenges
+
+Trunk-Based
+├── Qualidade de Código
+└── Feature Flags
+
+Feature Branch
+├── Long-Living Branches
+└── Merge Hell
+
+Gitflow
+├── Complexidade
+└── Overhead
+
+Fork
+├── Sincronização
+└── Divergência
+```
+
+### 2. Mitigação de Riscos
+
+```MERMAID
+graph TD
+    A[Riscos] --> B[Automação]
+    A --> C[Code Review]
+    A --> D[CI/CD]
+    A --> E[Documentação]
+```
+
+## Escolhendo um Workflow
+
+### 1. Critérios de Decisão
+
+```MERMAID
+mindmap
+    root((Decisão))
+        Time
+            Tamanho
+            Distribuição
+        Projeto
+            Complexidade
+            Escala
+        Entrega
+            Frequência
+            Processo
+```
+
+### 2. Matriz de Decisão
+
+```
+🎯 Decision Matrix
+
+Small Team + Fast Delivery
+└── Trunk-Based
+
+Medium Team + Regular Releases
+└── Feature Branch
+
+Large Team + Structured Releases
+└── Gitflow
+
+Open Source + Community
+└── Fork
+```
+
+## Migração entre Workflows
+
+### 1. Processo de Transição
+
+```MERMAID
+graph LR
+    A[Atual] --> B[Planejamento]
+    B --> C[Piloto]
+    C --> D[Migração]
+    D --> E[Consolidação]
+```
+
+### 2. Checklist de Migração
+
+```
+📋 Migration Checklist
+
+1. [ ] Avaliar workflow atual
+2. [ ] Definir novo workflow
+3. [ ] Treinar equipe
+4. [ ] Projeto piloto
+5. [ ] Migração gradual
+6. [ ] Documentação
+7. [ ] Monitoramento
+```
+
+## Ferramentas e Automação
+
+### 1. Stack Tecnológica
+
+```MERMAID
+mindmap
+    root((Tools))
+        Git
+            GitHub/GitLab
+            Bitbucket
+        CI/CD
+            Jenkins
+            GitHub Actions
+        Review
+            Pull Requests
+            Code Review
+```
+
+### 2. Automações Essenciais
+
+```
+🤖 Automation Must-Haves
+
+CI/CD Pipeline
+├── Build
+├── Test
+└── Deploy
+
+Code Quality
+├── Linting
+├── Testing
+└── Coverage
+
+Branch Protection
+├── Reviews
+└── Checks
+```
+
+## Conclusão
+
+Como escolher entre as festas do American Pie, a escolha do workflow depende do seu "estilo de festa":
+
+```MERMAID
+mindmap
+    root((Escolha))
+        Velocidade
+            Trunk-Based
+        Flexibilidade
+            Feature Branch
+        Estrutura
+            Gitflow
+        Comunidade
+            Fork
+```
+
+Lembre-se: não existe workflow perfeito, existe o workflow certo para seu contexto. Como diria o Stifler: "A melhor festa é aquela que funciona pro seu grupo!"
+
+
+
 # Melhores Práticas em Controle de Versão
 
 ## Organização de Repositório
