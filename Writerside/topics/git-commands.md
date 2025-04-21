@@ -404,5 +404,25 @@ git push origin feature
 | `git show <commit>` | Mostra informações do commit | 🔍 Investigação |
 | `git show-branch` | Mostra branches e seus commits | 🔍 Investigação |
 | `git whatchanged` | Mostra histórico de mudanças | 🔍 Investigação |
+| `git log --graph --oneline` | Mostra log em formato de árvore | 🔍 Investigação |
+| `git log --author="nome"` | Filtra commits por autor | 🔍 Investigação |
+| `git log --since="1 week ago"` | Mostra commits da última semana | 🔍 Investigação |
+| `git log --grep="feat"` | Busca commits por mensagem | 🔍 Investigação |
+| `git log -p <arquivo>` | Mostra histórico de mudanças do arquivo | 🔍 Investigação |
+| `git blame -L 10,20 <arquivo>` | Mostra autores das linhas 10-20 | 🔍 Investigação |
+| `git diff --cached` | Mostra diferenças staged | 🔍 Investigação |
+| `git diff branch1...branch2` | Compara branches desde ancestral comum | 🔍 Investigação |
+| `git checkout -` | Volta para branch anterior | 🌳 Branches |
+| `git branch --merged` | Lista branches já mergeadas | 🌳 Branches |
+| `git branch --no-merged` | Lista branches não mergeadas | 🌳 Branches |
+| `git push --delete origin <branch>` | Remove branch remota | 🌳 Branches |
+| `git commit --amend --no-edit` | Adiciona alterações ao último commit | 💩 Correções |
+| `git restore --staged <arquivo>` | Remove arquivo do stage (Git moderno) | 💩 Correções |
+| `git restore <arquivo>` | Descarta alterações não staged (Git moderno) | 💩 Correções |
+| `git rebase --onto main topic-1 topic-2` | Rebases encadeados | 🎓 Avançado |
+| `git merge-base branch1 branch2` | Encontra commit ancestral comum | 🎓 Avançado |
+| `git rev-parse --short HEAD` | Mostra hash curto do commit atual | 🔍 Investigação |
+| `git update-index --skip-worktree <arquivo>` | Ignora mudanças locais | 🛠️ Configuração |
+| `git update-index --no-skip-worktree <arquivo>` | Volta a rastrear mudanças | 🛠️ Configuração |
 
-> **Dica Pro**: Favorite esta tabela para consulta rápida dos comandos mais importantes!
+> **Dica Pro**: Use `git help <comando>` para ver a documentação completa de qualquer comando!
