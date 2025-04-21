@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE terms SYSTEM "https://resources.jetbrains.com/writerside/1.0/glossary.dtd">
 <terms>
-    <term name="foo">
-        Description of what "foo" is.
-    </term>
+    <term name="VCS">Sistema de Controle de Versão (Version Control System) - Sistema que registra alterações em arquivos ao longo do tempo.</term>
+    <term name="Git">Sistema de controle de versão distribuído criado por Linus Torvalds em 2005.</term>
+    <term name="Commit">Snapshot das alterações em um repositório Git.</term>
+    <term name="Branch">Ramificação independente de desenvolvimento no Git.</term>
+    <term name="Merge">Processo de combinar alterações de diferentes branches.</term>
+    <term name="Push">Enviar commits locais para um repositório remoto.</term>
+    <term name="Pull">Buscar e integrar alterações de um repositório remoto.</term>
+    <term name="Clone">Criar uma cópia local de um repositório remoto.</term>
 </terms>

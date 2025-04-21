@@ -2,18 +2,30 @@
 <!DOCTYPE buildprofiles SYSTEM "https://resources.jetbrains.com/writerside/1.0/build-profiles.dtd">
 <buildprofiles xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/build-profiles.xsd"
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
-     <variables>
+    <variables>
         <header-logo>logo-primary.svg</header-logo>
         <custom-favicons>logo-primary.svg</custom-favicons>
+        <product-web-url>version-control-system.html</product-web-url>
+        <download-title>Get Learn Version Control System</download-title>
+        <search-scope>project</search-scope>
     </variables>
+
+    <sitemap priority="0.5" change-frequency="monthly" />
+
+    <llms-txt single-file="true" />
+
     <build-profile instance="in">
         <variables>
             <noindex-content>true</noindex-content>
+            <primary-color>halloween</primary-color>
         </variables>
     </build-profile>
 
-     <footer>
+
+    <footer>
         <copyright>PunkDomus 2025</copyright>
+        <social-links>
+            <link href="https://github.com/mrpunkdasilva/learn-version-control-system" type="github"/>
+        </social-links>
     </footer>
 </buildprofiles>

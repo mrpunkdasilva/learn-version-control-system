@@ -2,5 +2,9 @@
 <!DOCTYPE categories
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/categories.dtd">
 <categories>
-    <category id="wrs" name="Writerside documentation" order="1"/>
+    <category id="git" name="Git Basics" order="1"/>
+    <category id="advanced" name="Advanced Git" order="2"/>
+    <category id="workflow" name="Git Workflow" order="3"/>
+    <category id="tools" name="Git Tools" order="4"/>
+    <category id="best-practices" name="Best Practices" order="5"/>
 </categories>

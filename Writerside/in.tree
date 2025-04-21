@@ -3,7 +3,29 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 
 <instance-profile id="in"
-                  name="Learn Version Control System" start-page="Version-Control-System.md">
+                 name="Git Pie"
+                 start-page="intro.md">
 
-    <toc-element topic="Version-Control-System.md"/>
+    <toc-element topic="intro.md"/>
+    
+    <toc-element toc-title="Fundamentos de Versionamento">
+        <toc-element topic="version-control-basics.md"/>
+        <toc-element topic="version-control-types.md"/>
+    </toc-element>
+
+    <toc-element toc-title="Git">
+        <toc-element topic="git-history.md"/>
+        <toc-element topic="git-basics.md"/>
+        <toc-element topic="git-workflow.md"/>
+        <toc-element topic="git-commands.md"/>
+    </toc-element>
+
+    <toc-element toc-title="Práticas com Git">
+        <toc-element topic="git-branches.md"/>
+        <toc-element topic="git-remote.md"/>
+    </toc-element>
+
+    <toc-element toc-title="Referências">
+        <toc-element topic="references.md"/>
+    </toc-element>
 </instance-profile>
