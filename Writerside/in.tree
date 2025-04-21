@@ -42,11 +42,6 @@
         <toc-element topic="git-commands.md"/>
     </toc-element>
 
-    <toc-element toc-title="Práticas com Git">
-        <toc-element topic="git-branches.md"/>
-        <toc-element topic="git-remote.md"/>
-    </toc-element>
-
     <toc-element toc-title="Referências">
         <toc-element topic="references.md"/>
     </toc-element>
