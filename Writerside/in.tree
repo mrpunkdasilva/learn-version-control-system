@@ -18,7 +18,18 @@
             <toc-element topic="version-control-history.md"/>
             <toc-element topic="modern-version-control.md"/>
         </toc-element>
-        <toc-element topic="version-control-workflows.md"/>
+        <toc-element topic="version-control-workflows.md">
+            <toc-element topic="trunk-based-development.md"/>
+            <toc-element topic="feature-branch-workflow.md"/>
+            <toc-element topic="gitflow-workflow.md"/>
+            <toc-element topic="forking-workflow.md"/>
+            <toc-element topic="release-management.md"/>
+            <toc-element topic="hotfix-strategies.md"/>
+            <toc-element topic="workflow-comparison.md"/>
+            <toc-element topic="workflow-migration.md"/>
+            <toc-element topic="workflow-best-practices.md"/>
+            <toc-element topic="workflow-automation.md"/>
+        </toc-element>
         <toc-element topic="version-control-best-practices.md"/>
         <toc-element topic="version-control-terminology.md"/>
         <toc-element topic="version-control-security.md"/>

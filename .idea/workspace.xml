@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8dc9b24-9799-4258-87a2-324d1f1c127f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/centralized-version-control.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/centralized-version-control.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Writerside/topics/distributed-version-control.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/distributed-version-control.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Writerside/topics/version-control-comparison.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/version-control-comparison.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Writerside/topics/version-control-history.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/version-control-history.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pdfSourceIN.html" beforeDir="false" afterPath="$PROJECT_DIR$/pdfSourceIN.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pdfSourceIN.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/pdfSourceIN.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webHelpIN2-all.zip" beforeDir="false" afterPath="$PROJECT_DIR$/webHelpIN2-all.zip" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +149,7 @@
       <updated>1745240923983</updated>
       <workItem from="1745240925505" duration="3077000" />
       <workItem from="1745247522377" duration="7471000" />
-      <workItem from="1745263015368" duration="2951000" />
+      <workItem from="1745263015368" duration="4361000" />
     </task>
     <servers />
   </component>
