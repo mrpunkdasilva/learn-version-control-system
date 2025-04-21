@@ -105,7 +105,7 @@
       <recent name="$PROJECT_DIR$/Writerside/cfg" />
     </key>
   </component>
-  <component name="RunManager" selected="Writerside.Web Archive (in)">
+  <component name="RunManager" selected="Writerside.PDF (in)">
     <configuration name="PDF (in)" type="StardustRunConfiguration" factoryName="build-pdf">
       <option name="addCover" value="true" />
       <option name="addFooter" value="true" />
