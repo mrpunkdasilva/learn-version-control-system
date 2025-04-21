@@ -10,7 +10,14 @@
     
     <toc-element toc-title="Fundamentos de Versionamento">
         <toc-element topic="version-control-basics.md"/>
-        <toc-element topic="version-control-types.md"/>
+        <toc-element topic="version-control-types.md">
+            <toc-element topic="local-version-control.md"/>
+            <toc-element topic="centralized-version-control.md"/>
+            <toc-element topic="distributed-version-control.md"/>
+            <toc-element topic="version-control-comparison.md"/>
+            <toc-element topic="version-control-history.md"/>
+            <toc-element topic="modern-version-control.md"/>
+        </toc-element>
         <toc-element topic="version-control-workflows.md"/>
         <toc-element topic="version-control-best-practices.md"/>
         <toc-element topic="version-control-terminology.md"/>

@@ -99,11 +99,9 @@ Escolher um sistema de controle de versão é como escolher onde fazer a festa:
 - Na casa da mãe do Stifler (Centralizado)
 - Em todas as casas ao mesmo tempo (Distribuído)
 
-> ![](stifler-approved.gif)
 > Stifler aprovando sistemas distribuídos
 
 ## Nota Final
 Lembre-se: assim como Stifler aprendeu a respeitar as milfs, você precisa respeitar seu sistema de controle de versão. Escolha sabiamente!
 
-> ![](american-pie-ending.gif)
 > E viveram felizes para sempre com Git

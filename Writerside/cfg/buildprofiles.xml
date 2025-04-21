@@ -5,7 +5,6 @@
     <variables>
         <header-logo>logo-primary.svg</header-logo>
         <custom-favicons>logo-primary.svg</custom-favicons>
-        <product-web-url>version-control-system.html</product-web-url>
         <download-title>Get Learn Version Control System</download-title>
         <search-scope>project</search-scope>
         <custom-css>customize.css</custom-css>

@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8dc9b24-9799-4258-87a2-324d1f1c127f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/operating-systems.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Writerside/topics/centralized-version-control.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Writerside/topics/distributed-version-control.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Writerside/topics/local-version-control.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Writerside/topics/modern-version-control.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Writerside/topics/version-control-comparison.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Writerside/topics/version-control-history.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Writerside/cfg/buildprofiles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/cfg/buildprofiles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Writerside/in.tree" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/in.tree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Writerside/topics/version-control-types.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/version-control-types.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,22 +24,58 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "mrpunkdasilva"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;mrpunkdasilva&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
-    "url": "https://github.com/mrpunkdasilva/learn-version-control-system.git",
+    "url": "git@github.com:mrpunkdasilva/learn-version-control-system.git",
     "accountId": "e2744071-5c75-4d41-8185-a83b6a35c7eb"
   }
 }]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="InstanceColorv3">
+    <option name="map">
+      <map>
+        <entry key="$PROJECT_DIR$/Writerside/in.tree">
+          <value>
+            <ColorState>
+              <option name="customOrder" value="1" />
+              <option name="first">
+                <RgbState>
+                  <option name="blue" value="60" />
+                  <option name="darkBlue" value="60" />
+                  <option name="darkGreen" value="68" />
+                  <option name="darkRed" value="206" />
+                  <option name="green" value="68" />
+                  <option name="red" value="206" />
+                </RgbState>
+              </option>
+              <option name="second">
+                <RgbState>
+                  <option name="blue" value="65" />
+                  <option name="darkBlue" value="65" />
+                  <option name="darkGreen" value="126" />
+                  <option name="darkRed" value="231" />
+                  <option name="green" value="126" />
+                  <option name="red" value="231" />
+                </RgbState>
+              </option>
+            </ColorState>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2w2Y1vupdxZT9ln9ZJoEADSIdf3" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -42,18 +84,57 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "Writerside.PDF (in).executor": "Run",
+    "Writerside.Web Archive (in).executor": "Run",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/mrpunkdasilva/WebstormProjects/learn-version-control-system/Writerside/images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "stardust.markdown.MarkdownSplitEditorSuppressor:keyList": []
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Writerside/images" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Writerside/cfg" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Writerside.Web Archive (in)">
+    <configuration name="PDF (in)" type="StardustRunConfiguration" factoryName="build-pdf">
+      <option name="addCover" value="true" />
+      <option name="addFooter" value="true" />
+      <option name="addHeader" value="true" />
+      <option name="copyright" />
+      <option name="description" />
+      <option name="folderPath" value="$PROJECT_DIR$" />
+      <option name="footer" />
+      <option name="header" />
+      <option name="instanceId" value="in" />
+      <option name="instanceName" value="Git Pie" />
+      <option name="layout" />
+      <option name="logoPath" />
+      <option name="moduleName" value="Writerside" />
+      <option name="title" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Web Archive (in)" type="StardustRunConfiguration" factoryName="save-as-zip">
+      <option name="folderPath" value="$PROJECT_DIR$" />
+      <option name="instanceId" value="in" />
+      <option name="instanceName" value="Git Pie" />
+      <option name="moduleName" value="Writerside" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Writerside.PDF (in)" />
+      <item itemvalue="Writerside.Web Archive (in)" />
+    </list>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -70,10 +151,23 @@
       <option name="presentableId" value="Default" />
       <updated>1745240923983</updated>
       <workItem from="1745240925505" duration="3077000" />
+      <workItem from="1745247522377" duration="7471000" />
+      <workItem from="1745263015368" duration="2641000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
