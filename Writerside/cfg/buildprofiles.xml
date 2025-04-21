@@ -8,6 +8,7 @@
         <product-web-url>version-control-system.html</product-web-url>
         <download-title>Get Learn Version Control System</download-title>
         <search-scope>project</search-scope>
+        <custom-css>customize.css</custom-css>
     </variables>
 
     <sitemap priority="0.5" change-frequency="monthly" />

@@ -11,6 +11,10 @@
     <toc-element toc-title="Fundamentos de Versionamento">
         <toc-element topic="version-control-basics.md"/>
         <toc-element topic="version-control-types.md"/>
+        <toc-element topic="version-control-workflows.md"/>
+        <toc-element topic="version-control-best-practices.md"/>
+        <toc-element topic="version-control-terminology.md"/>
+        <toc-element topic="version-control-security.md"/>
     </toc-element>
 
     <toc-element toc-title="Git">
