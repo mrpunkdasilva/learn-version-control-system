@@ -83,6 +83,11 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;stardust.markdown.MarkdownSplitEditorSuppressor:keyList&quot;: [
+      &quot;/home/mrpunkdasilva/WebstormProjects/learn-version-control-system/Writerside/topics/version-control-workflows.md&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -142,7 +147,7 @@
       <workItem from="1745240925505" duration="3077000" />
       <workItem from="1745247522377" duration="7471000" />
       <workItem from="1745263015368" duration="4361000" />
-      <workItem from="1745292808326" duration="298000" />
+      <workItem from="1745292808326" duration="758000" />
     </task>
     <servers />
   </component>

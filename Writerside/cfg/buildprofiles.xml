@@ -8,6 +8,7 @@
         <download-title>Get Learn Version Control System</download-title>
         <search-scope>project</search-scope>
         <custom-css>customize.css</custom-css>
+        <search-scope>project</search-scope>
     </variables>
 
     <sitemap priority="0.5" change-frequency="monthly" />
