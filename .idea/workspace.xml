@@ -27,12 +27,12 @@
     &quot;assignee&quot;: &quot;mrpunkdasilva&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:mrpunkdasilva/learn-version-control-system.git",
-    "accountId": "e2744071-5c75-4d41-8185-a83b6a35c7eb"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:mrpunkdasilva/learn-version-control-system.git&quot;,
+    &quot;accountId&quot;: &quot;e2744071-5c75-4d41-8185-a83b6a35c7eb&quot;
   }
-}]]></component>
+}</component>
   <component name="InstanceColorv3">
     <option name="map">
       <map>
@@ -77,22 +77,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Writerside.PDF (in).executor": "Run",
-    "Writerside.Web Archive (in).executor": "Run",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/mrpunkdasilva/WebstormProjects/learn-version-control-system/Writerside/images",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Writerside.PDF (in).executor&quot;: &quot;Run&quot;,
+    &quot;Writerside.Web Archive (in).executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/mrpunkdasilva/WebstormProjects/learn-version-control-system/Writerside/images&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Writerside/images" />
@@ -102,7 +102,7 @@
       <recent name="$PROJECT_DIR$/Writerside/cfg" />
     </key>
   </component>
-  <component name="RunManager" selected="Writerside.PDF (in)">
+  <component name="RunManager" selected="Writerside.Web Archive (in)">
     <configuration name="PDF (in)" type="StardustRunConfiguration" factoryName="build-pdf">
       <option name="addCover" value="true" />
       <option name="addFooter" value="true" />

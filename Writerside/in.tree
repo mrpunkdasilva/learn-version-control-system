@@ -3,7 +3,7 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 
 <instance-profile id="in"
-                 name="Git Pie"
+                 name="Git Pie: A Arte Ancestral do Versionamento 🥧"
                  start-page="intro.md">
 
     <toc-element topic="intro.md"/>
@@ -17,6 +17,8 @@
             <toc-element topic="version-control-comparison.md"/>
             <toc-element topic="version-control-history.md"/>
             <toc-element topic="modern-version-control.md"/>
+            <toc-element topic="hybrid-version-control.md"/>
+            <toc-element topic="blockchain-version-control.md"/>
         </toc-element>
         <toc-element topic="version-control-workflows.md">
             <toc-element topic="trunk-based-development.md"/>
@@ -33,6 +35,12 @@
         <toc-element topic="version-control-best-practices.md"/>
         <toc-element topic="version-control-terminology.md"/>
         <toc-element topic="version-control-security.md"/>
+        <toc-element topic="version-control-integration.md">
+            <toc-element topic="ci-cd-integration.md"/>
+            <toc-element topic="ide-integration.md"/>
+            <toc-element topic="project-management-integration.md"/>
+            <toc-element topic="code-review-tools.md"/>
+        </toc-element>
     </toc-element>
 
     <toc-element toc-title="Git">
@@ -40,9 +48,74 @@
         <toc-element topic="git-basics.md"/>
         <toc-element topic="git-workflow.md"/>
         <toc-element topic="git-commands.md"/>
+
+        <toc-element topic="git-internals.md">
+            <toc-element topic="git-objects.md"/>
+            <toc-element topic="git-refs.md"/>
+            <toc-element topic="git-packfiles.md"/>
+            <toc-element topic="git-garbage-collection.md"/>
+        </toc-element>
+
+        <toc-element topic="git-advanced.md">
+            <toc-element topic="git-hooks.md"/>
+            <toc-element topic="git-submodules.md"/>
+            <toc-element topic="git-subtrees.md"/>
+            <toc-element topic="git-worktrees.md"/>
+            <toc-element topic="git-bisect.md"/>
+            <toc-element topic="git-filter-branch.md"/>
+        </toc-element>
+        <toc-element topic="git-tools.md">
+            <toc-element topic="git-guis.md"/>
+            <toc-element topic="git-extensions.md"/>
+            <toc-element topic="git-lfs.md"/>
+            <toc-element topic="git-credential-helpers.md"/>
+        </toc-element>
+        <toc-element topic="git-hosting.md">
+            <toc-element topic="github-specific.md"/>
+            <toc-element topic="gitlab-specific.md"/>
+            <toc-element topic="bitbucket-specific.md"/>
+            <toc-element topic="self-hosted-git.md"/>
+        </toc-element>
+        <toc-element topic="git-security.md">
+            <toc-element topic="git-signing.md"/>
+            <toc-element topic="git-secrets.md"/>
+            <toc-element topic="git-authentication.md"/>
+            <toc-element topic="git-security-best-practices.md"/>
+        </toc-element>
+        <toc-element topic="git-migration.md">
+            <toc-element topic="svn-to-git.md"/>
+            <toc-element topic="mercurial-to-git.md"/>
+            <toc-element topic="repository-splitting.md"/>
+            <toc-element topic="repository-merging.md"/>
+        </toc-element>
+        <toc-element topic="git-troubleshooting.md">
+            <toc-element topic="common-issues.md"/>
+            <toc-element topic="performance-issues.md"/>
+            <toc-element topic="large-repositories.md"/>
+            <toc-element topic="recovery-procedures.md"/>
+        </toc-element>
+    </toc-element>
+
+    <toc-element toc-title="Boas Práticas">
+        <toc-element topic="commit-conventions.md"/>
+        <toc-element topic="branching-strategies.md"/>
+        <toc-element topic="code-review-practices.md"/>
+        <toc-element topic="documentation-practices.md"/>
+        <toc-element topic="team-collaboration.md"/>
+        <toc-element topic="continuous-integration.md"/>
+    </toc-element>
+
+    <toc-element toc-title="Casos de Uso">
+        <toc-element topic="monorepo-management.md"/>
+        <toc-element topic="open-source-workflow.md"/>
+        <toc-element topic="enterprise-git.md"/>
+        <toc-element topic="git-devops.md"/>
     </toc-element>
 
     <toc-element toc-title="Referências">
         <toc-element topic="references.md"/>
+        <toc-element topic="glossary.md"/>
+        <toc-element topic="resources.md"/>
+        <toc-element topic="cheat-sheet.md"/>
     </toc-element>
 </instance-profile>
