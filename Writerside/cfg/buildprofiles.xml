@@ -5,28 +5,34 @@
     <variables>
         <header-logo>logo-primary.svg</header-logo>
         <custom-favicons>logo-primary.svg</custom-favicons>
-        <download-title>Get Learn Version Control System</download-title>
+        <download-title>Repository</download-title>
+        <download-page>https://github.com/mrpunkdasilva/learn-version-control-system</download-page>
+        <showDownloadButton>true</showDownloadButton>
         <search-scope>project</search-scope>
         <custom-css>customize.css</custom-css>
-        <search-scope>project</search-scope>
+        <color-preset>contrast</color-preset>
+        <product-web-url>https://mrpunkdasilva.github.io/learn-version-control-system//</product-web-url>
     </variables>
 
-    <sitemap priority="0.5" change-frequency="monthly" />
+    <sitemap priority="0.5" change-frequency="monthly"/>
 
-    <llms-txt single-file="true" />
-
+    <llms-txt single-file="true"/>
     <build-profile instance="in">
         <variables>
             <noindex-content>true</noindex-content>
             <primary-color>halloween</primary-color>
+            <versions-switcher>https://my.company.resources.com/help-versions.json</versions-switcher>
         </variables>
     </build-profile>
 
+    <shortcuts>
+        <src>keymap.xml</src>
+        <layout name="Windows" display-name="Windows"/>
+        <layout name="macOS" display-name="macOS"/>
+    </shortcuts>
 
     <footer>
         <copyright>PunkDomus 2025</copyright>
-        <social-links>
-            <link href="https://github.com/mrpunkdasilva/learn-version-control-system" type="github"/>
-        </social-links>
+        <social type="github" href="https://github.com/mrpunkdasilva/learn-version-control-system"/>
     </footer>
 </buildprofiles>

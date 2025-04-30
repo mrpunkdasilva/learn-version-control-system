@@ -1,10 +1,12 @@
-Thread 1/5 🧵
+Thread
 
 🥧 Lançamos o Git Pie!
 Um guia completo de Git em PT-BR para devs brasileiros.
 Sem complicação, direto ao ponto.
 
-[URL]
+[https://mrpunkdasilva.github.io/learn-version-control-system/]
+
+🧵 1/5
 
 ---
 2/5

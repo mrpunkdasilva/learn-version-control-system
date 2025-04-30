@@ -49,7 +49,7 @@
         <toc-element topic="git-history.md"/>
         <toc-element topic="git-basics.md">
             <toc-element topic="first-steps.md"/>
-            <toc-element topic="git-debug.md" />
+            <toc-element topic="git-debug.md"/>
         </toc-element>
         <toc-element topic="git-workflow.md"/>
         <toc-element topic="git-commands.md"/>
@@ -69,6 +69,7 @@
             <toc-element topic="git-worktrees.md"/>
             <toc-element topic="git-bisect.md"/>
             <toc-element topic="git-filter-branch.md"/>
+            <toc-element topic="git-cherry-pick.md"/>
             <toc-element topic="git-testing.md"/>
             <toc-element topic="git-automation.md"/>
         </toc-element>
@@ -102,6 +103,38 @@
             <toc-element topic="large-repositories.md"/>
             <toc-element topic="recovery-procedures.md"/>
         </toc-element>
+    </toc-element>
+
+
+    <toc-element toc-title="GitLab">
+        <toc-element topic="gitlab-overview.md"/>
+        <toc-element topic="gitlab-installation.md"/>
+        <toc-element topic="gitlab-configuration.md">
+            <toc-element topic="gitlab-ssh-setup.md"/>
+            <toc-element topic="gitlab-ci-setup.md"/>
+            <toc-element topic="gitlab-security-setup.md"/>
+            <toc-element topic="gitlab-backup-setup.md"/>
+        </toc-element>
+        <toc-element topic="gitlab-workflow.md">
+            <toc-element topic="gitlab-merge-requests.md"/>
+            <toc-element topic="gitlab-issues.md"/>
+            <toc-element topic="gitlab-boards.md"/>
+            <toc-element topic="gitlab-milestones.md"/>
+        </toc-element>
+        <toc-element topic="gitlab-ci-cd.md">
+            <toc-element topic="gitlab-runners.md"/>
+            <toc-element topic="gitlab-pipelines.md"/>
+            <toc-element topic="gitlab-environments.md"/>
+            <toc-element topic="gitlab-artifacts.md"/>
+        </toc-element>
+        <toc-element topic="gitlab-administration.md">
+            <toc-element topic="gitlab-user-management.md"/>
+            <toc-element topic="gitlab-permissions.md"/>
+            <toc-element topic="gitlab-monitoring.md"/>
+            <toc-element topic="gitlab-maintenance.md"/>
+        </toc-element>
+        <toc-element topic="gitlab-integrations.md"/>
+        <toc-element topic="gitlab-best-practices.md"/>
     </toc-element>
 
     <toc-element toc-title="Boas Práticas">

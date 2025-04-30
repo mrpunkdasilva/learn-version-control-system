@@ -12201,6 +12201,288 @@ Dica Pro: Sempre teste filter-branch em um clone do repositório antes de aplica
 
 
 
+# Git Cherry-pick: Aplicando Commits Seletivamente
+
+```
++------------------------+
+|    Git Cherry-pick    |
+|                       |
+| Seleção de Commits    |
+| Aplicação Precisa     |
+| Integração Seletiva   |
+|                       |
+| Controle Granular     |
++------------------------+
+```
+
+## Fundamentos do Cherry-pick
+
+### O que é Cherry-pick?
+
+O cherry-pick é como um rebase para um único commit. Ele pega as alterações introduzidas em um commit específico e as aplica na branch atual, criando um novo commit com o mesmo conteúdo, mas com um hash diferente.
+
+```MERMAID
+gitGraph
+    commit id: "A"
+    commit id: "B"
+    branch feature
+    commit id: "C"
+    checkout main
+    cherry-pick id: "C"
+```
+
+### Sintaxe Básica
+
+```BASH
+# Formato básico
+git cherry-pick <commit-hash>
+
+# Exemplo prático
+git cherry-pick abc123
+
+# Cherry-pick múltiplos commits
+git cherry-pick abc123 def456
+
+# Cherry-pick de um range
+git cherry-pick abc123^..def456
+```
+
+## Técnicas Avançadas
+
+### Cherry-pick com Opções
+
+```BASH
+# Cherry-pick sem commit automático
+git cherry-pick --no-commit abc123
+
+# Cherry-pick mantendo autoria original
+git cherry-pick -x abc123
+
+# Cherry-pick com mensagem personalizada
+git cherry-pick -e abc123
+
+# Cherry-pick apenas registrando (sem alterações)
+git cherry-pick --signoff abc123
+```
+
+### Resolvendo Conflitos
+
+```MERMAID
+sequenceDiagram
+    participant U as Usuário
+    participant G as Git
+    U->>G: git cherry-pick abc123
+    G->>U: Conflito!
+    U->>G: Resolve conflito
+    U->>G: git add .
+    U->>G: git cherry-pick --continue
+```
+
+```BASH
+# Quando ocorrer conflito
+git cherry-pick abc123
+# ... conflito ocorre ...
+
+# Resolver conflitos manualmente
+# Depois:
+git add .
+git cherry-pick --continue
+
+# Ou abortar o processo
+git cherry-pick --abort
+```
+
+## Casos de Uso
+
+### Backport de Correções
+
+```MERMAID
+gitGraph
+    commit id: "1.0"
+    branch develop
+    checkout develop
+    commit id: "Fix Bug"
+    checkout main
+    cherry-pick id: "Fix Bug"
+    commit tag: "1.0.1"
+```
+
+```BASH
+# Backport de uma correção
+git checkout release/1.0
+git cherry-pick abc123  # commit da correção
+git tag v1.0.1
+git push origin v1.0.1
+```
+
+### Seleção de Features
+
+```
++------------------------+
+|    CASOS DE USO       |
+|                       |
+| • Backport de fixes   |
+| • Seleção de features |
+| • Recuperação parcial |
+| • Migração seletiva   |
+| • Testes isolados     |
++------------------------+
+```
+
+## Estratégias e Padrões
+
+### Cherry-pick vs Merge vs Rebase
+
+```MERMAID
+mindmap
+    root((Estratégias))
+        Cherry-pick
+            Seletivo
+            Preciso
+            Novo hash
+        Merge
+            Completo
+            Histórico
+            Commit merge
+        Rebase
+            Sequencial
+            Linear
+            Reescreve
+```
+
+### Workflow com Cherry-pick
+
+```MERMAID
+graph TD
+    A[Desenvolvimento] -->|Commits| B[Feature Branch]
+    B -->|Review| C[Aprovação]
+    C -->|Cherry-pick| D[Release Branch]
+    C -->|Merge| E[Develop Branch]
+```
+
+## Boas Práticas
+
+### Quando Usar
+
+```
+✅ USE QUANDO:
+• Precisa de commits específicos
+• Backport de correções
+• Migração seletiva
+• Testes isolados
+
+❌ EVITE QUANDO:
+• Precisa de toda a branch
+• Muitos commits sequenciais
+• Histórico é importante
+• Commits interdependentes
+```
+
+### Dicas de Produtividade
+
+```BASH
+# Alias útil para cherry-pick
+git config --global alias.cp 'cherry-pick'
+
+# Cherry-pick com mensagem personalizada
+git cp -e abc123
+
+# Cherry-pick múltiplos commits
+git cp --no-commit abc123 def456 ghi789
+git commit -m "Aplica features X, Y e Z"
+```
+
+## Troubleshooting
+
+### Problemas Comuns
+
+```MERMAID
+mindmap
+    root((Problemas))
+        Conflitos
+            Manuais
+            Estratégias
+        Dependências
+            Ordem
+            Faltantes
+        Duplicação
+            Mesmo código
+            Diferentes hashes
+```
+
+### Soluções
+
+```BASH
+# Conflito complexo
+git cherry-pick --abort
+git checkout -b temp-branch
+git merge feature-branch
+# Resolver manualmente
+git checkout main
+git cherry-pick temp-branch
+
+# Verificar diferenças antes
+git show abc123
+```
+
+## Automação
+
+### Scripts Úteis
+
+```BASH
+#!/bin/bash
+# Cherry-pick todos os commits de uma branch que contêm uma palavra-chave
+cherry_pick_by_keyword() {
+    local branch="$1"
+    local keyword="$2"
+    
+    git log --grep="$keyword" --format="%H" "$branch" | 
+    tac | 
+    xargs -I{} git cherry-pick {}
+}
+
+# Uso: cherry_pick_by_keyword feature/login "auth"
+```
+
+### CI/CD Integration
+
+```YAML
+name: Backport Fixes
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+jobs:
+  backport:
+    if: github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'backport')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Backport
+        run: |
+          git checkout release/1.0
+          git cherry-pick ${{ github.event.pull_request.merge_commit_sha }}
+          git push origin release/1.0
+```
+
+## Próximos Passos
+
+### Tópicos Relacionados
+
+* [Git Rebase](null)
+
+* [Git Merge](null)
+
+* [Git Workflows](null)
+
+Tip:
+
+Dica Pro: O cherry-pick é uma ferramenta poderosa, mas use com moderação. Commits frequentemente cherry-picked podem indicar problemas no seu workflow de branches.
+
+
+
 # Git Testing: Garantindo Qualidade no Versionamento
 
 ```
@@ -16613,6 +16895,1150 @@ graph LR
 Tip:
 
 Dica Pro: Mantenha um plano de recuperação documentado e testado regularmente para minimizar tempo de recuperação em emergências.
+
+
+
+# GitLab: Visão Geral
+
+```
++------------------------+
+|        GitLab         |
+|                       |
+| DevOps Completo       |
+| Ciclo de Vida         |
+| Colaboração           |
+|                       |
+| Tudo em Um            |
++------------------------+
+```
+
+## O que é GitLab?
+
+O GitLab é uma plataforma DevOps completa, entregue como uma única aplicação. Ele abrange todo o ciclo de vida DevOps, permitindo que equipes colaborem, desenvolvam, testem, implantem e monitorem aplicações em um único ambiente.
+
+```MERMAID
+mindmap
+    root((GitLab))
+        SCM
+            Git
+            Branches
+            MRs
+        CI/CD
+            Pipelines
+            Runners
+            Environments
+        Planejamento
+            Issues
+            Boards
+            Milestones
+        Segurança
+            SAST
+            DAST
+            Dependency Scanning
+        Monitoramento
+            Metrics
+            Logs
+            Alerts
+```
+
+## Edições do GitLab
+
+### Comparação
+
+```
++------------------------+
+|      EDIÇÕES          |
+|                       |
+| • Community Edition   |
+|   - Open Source       |
+|   - Gratuito          |
+|                       |
+| • Enterprise Edition  |
+|   - Comercial         |
+|   - Recursos extras   |
+|                       |
+| • SaaS (gitlab.com)   |
+|   - Hospedado         |
+|   - Planos variados   |
++------------------------+
+```
+
+### Recursos por Edição
+
+```MERMAID
+graph TD
+    A[GitLab] --> B[CE]
+    A --> C[EE]
+    B --> D[Recursos Básicos]
+    C --> D
+    C --> E[Recursos Enterprise]
+    E --> F[Governança]
+    E --> G[Segurança Avançada]
+    E --> H[Gerenciamento]
+```
+
+## Arquitetura
+
+### Componentes
+
+```MERMAID
+graph TD
+    A[Frontend] --> B[Rails]
+    B --> C[PostgreSQL]
+    B --> D[Redis]
+    B --> E[Sidekiq]
+    F[GitLab Runner] -.-> B
+    G[GitLab Shell] --> B
+    H[Gitaly] --> B
+```
+
+### Serviços
+
+```
++------------------------+
+|     COMPONENTES       |
+|                       |
+| • Nginx               |
+| • Unicorn/Puma        |
+| • Sidekiq             |
+| • Redis               |
+| • PostgreSQL          |
+| • Gitaly              |
+| • GitLab Workhorse    |
+| • GitLab Shell        |
++------------------------+
+```
+
+## Principais Recursos
+
+### Gerenciamento de Código
+
+* Repositórios Git
+
+* Merge Requests
+
+* Code Review
+
+* Web IDE
+
+* Snippets
+
+### CI/CD
+
+```MERMAID
+sequenceDiagram
+    participant D as Dev
+    participant P as Pipeline
+    participant E as Env
+    D->>P: Push code
+    P->>P: Build
+    P->>P: Test
+    P->>P: Security Scan
+    P->>E: Deploy
+```
+
+### Planejamento e Monitoramento
+
+* Issues
+
+* Boards
+
+* Milestones
+
+* Epics (EE)
+
+* Roadmaps (EE)
+
+* Métricas e Analytics
+
+## Comparação com Outras Plataformas
+
+### GitLab vs GitHub
+
+```
++------------------------+
+|   GitLab vs GitHub    |
+|                       |
+| GitLab:               |
+| • DevOps completo     |
+| • CI/CD integrado     |
+| • Self-hosted fácil   |
+|                       |
+| GitHub:               |
+| • Maior comunidade    |
+| • Actions             |
+| • Melhor UX           |
++------------------------+
+```
+
+### GitLab vs Bitbucket
+
+```MERMAID
+mindmap
+    root((Comparação))
+        GitLab
+            DevOps completo
+            CI/CD nativo
+            Community Edition
+        Bitbucket
+            Integração Jira
+            Pipelines
+            Data Center
+```
+
+## Próximos Passos
+
+### Tópicos Relacionados
+
+* [Instalação do GitLab](gitlab-installation.html)
+
+* [Configuração do GitLab](gitlab-configuration.html)
+
+* [Configuração SSH no GitLab](gitlab-ssh-setup.html)
+
+* [CI/CD no GitLab](null)
+
+Tip:
+
+Dica Pro: O GitLab oferece uma experiência DevOps completa, mas comece com os recursos básicos e vá expandindo conforme sua equipe se familiariza com a plataforma.
+
+
+
+# Instalação do GitLab
+
+```
++------------------------+
+|  GitLab Installation  |
+|                       |
+| Self-Hosted           |
+| Omnibus Package       |
+| Docker                |
+| Kubernetes            |
+|                       |
+| Múltiplas Opções      |
++------------------------+
+```
+
+## Por que Instalar o GitLab Self-Hosted?
+
+Embora o GitLab.com ofereça uma solução hospedada pronta para uso, existem várias razões convincentes para optar por uma instalação self-hosted:
+
+### Vantagens do Self-Hosted
+
+```MERMAID
+mindmap
+    root((GitLab Self-Hosted))
+        Controle
+            Dados
+            Infraestrutura
+            Atualizações
+        Personalização
+            Configurações
+            Integrações
+            Hardware
+        Segurança
+            Isolamento
+            Compliance
+            Políticas internas
+        Custo
+            Licenciamento
+            Economia em escala
+```
+
+### Casos de Uso Específicos
+
+* Requisitos de Compliance: Organizações em setores regulamentados (finanças, saúde, governo) precisam manter dados sensíveis em suas próprias infraestruturas.
+
+* Ambientes Air-Gapped: Redes isoladas sem acesso à internet exigem soluções locais.
+
+* Personalização Avançada: Necessidade de integração profunda com sistemas internos e fluxos de trabalho específicos.
+
+* Performance: Controle sobre recursos de hardware para otimizar desempenho em grandes instalações.
+
+* Latência Reduzida: Instalação próxima aos desenvolvedores para operações Git mais rápidas.
+
+```
++------------------------+
+|   QUANDO ESCOLHER     |
+|                       |
+| • Dados sensíveis     |
+| • Muitos usuários     |
+| • Integração interna  |
+| • Controle total      |
+| • Compliance          |
+| • Redes isoladas      |
++------------------------+
+```
+
+## Requisitos de Sistema
+
+### Hardware Recomendado
+
+```
++------------------------+
+|    HARDWARE MÍNIMO    |
+|                       |
+| • 4 CPU cores         |
+| • 8GB RAM             |
+| • 40GB armazenamento  |
+|                       |
+|    RECOMENDADO        |
+|                       |
+| • 8+ CPU cores        |
+| • 16GB+ RAM           |
+| • SSD 100GB+          |
++------------------------+
+```
+
+### Software Necessário
+
+* Sistema operacional Linux (Ubuntu, Debian, CentOS)
+
+* Postfix para envio de emails
+
+* Acesso root ou sudo
+
+## Métodos de Instalação
+
+### Omnibus Package (Recomendado)
+
+```MERMAID
+graph TD
+    A[Preparação] --> B[Instalação]
+    B --> C[Configuração]
+    C --> D[Inicialização]
+    D --> E[Pós-instalação]
+```
+
+#### Ubuntu/Debian
+
+```BASH
+# Adicionar repositório GitLab
+curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash
+
+# Instalar GitLab CE
+sudo apt install gitlab-ce
+
+# Configurar e iniciar
+sudo gitlab-ctl reconfigure
+```
+
+#### CentOS/RHEL
+
+```BASH
+# Adicionar repositório GitLab
+curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | sudo bash
+
+# Instalar GitLab CE
+sudo yum install gitlab-ce
+
+# Configurar e iniciar
+sudo gitlab-ctl reconfigure
+```
+
+### Docker
+
+```BASH
+# Executar GitLab CE
+docker run --detach \
+  --hostname gitlab.exemplo.com \
+  --publish 443:443 --publish 80:80 --publish 22:22 \
+  --name gitlab \
+  --restart always \
+  --volume $GITLAB_HOME/config:/etc/gitlab \
+  --volume $GITLAB_HOME/logs:/var/log/gitlab \
+  --volume $GITLAB_HOME/data:/var/opt/gitlab \
+  gitlab/gitlab-ce:latest
+```
+
+### Docker Compose
+
+```YAML
+# docker-compose.yml
+version: '3.7'
+services:
+  gitlab:
+    image: 'gitlab/gitlab-ce:latest'
+    restart: always
+    hostname: 'gitlab.exemplo.com'
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'https://gitlab.exemplo.com'
+    ports:
+      - '80:80'
+      - '443:443'
+      - '22:22'
+    volumes:
+      - '$GITLAB_HOME/config:/etc/gitlab'
+      - '$GITLAB_HOME/logs:/var/log/gitlab'
+      - '$GITLAB_HOME/data:/var/opt/gitlab'
+```
+
+### Kubernetes (Helm)
+
+```BASH
+# Adicionar repositório Helm
+helm repo add gitlab https://charts.gitlab.io/
+
+# Instalar GitLab
+helm install gitlab gitlab/gitlab \
+  --set global.hosts.domain=exemplo.com \
+  --set global.hosts.externalIP=XX.XX.XX.XX \
+  --set certmanager-issuer.email=admin@exemplo.com
+```
+
+## Configuração Inicial
+
+### Primeiro Acesso
+
+1. Acesse `http://gitlab.exemplo.com` (ou o endereço configurado)
+
+2. Defina a senha para o usuário `root`
+
+3. Faça login com usuário `root` e a senha definida
+
+```MERMAID
+sequenceDiagram
+    participant U as Usuário
+    participant G as GitLab
+    U->>G: Acessa URL
+    G->>U: Solicita senha root
+    U->>G: Define senha
+    G->>U: Redireciona para login
+    U->>G: Login como root
+    G->>U: Dashboard admin
+```
+
+### Configuração de Email
+
+```RUBY
+# /etc/gitlab/gitlab.rb
+gitlab_rails['smtp_enable'] = true
+gitlab_rails['smtp_address'] = "smtp.gmail.com"
+gitlab_rails['smtp_port'] = 587
+gitlab_rails['smtp_user_name'] = "seu-email@gmail.com"
+gitlab_rails['smtp_password'] = "sua-senha"
+gitlab_rails['smtp_domain'] = "gmail.com"
+gitlab_rails['smtp_authentication'] = "login"
+gitlab_rails['smtp_enable_starttls_auto'] = true
+gitlab_rails['gitlab_email_from'] = 'gitlab@exemplo.com'
+```
+
+Após editar, aplique as alterações:
+
+```BASH
+sudo gitlab-ctl reconfigure
+```
+
+## Atualizações
+
+### Omnibus Package
+
+```BASH
+# Backup antes de atualizar
+sudo gitlab-backup create
+
+# Atualizar pacotes
+sudo apt update
+sudo apt upgrade gitlab-ce
+
+# Aplicar alterações
+sudo gitlab-ctl reconfigure
+```
+
+### Docker
+
+```BASH
+# Puxar nova imagem
+docker pull gitlab/gitlab-ce:latest
+
+# Parar e remover container atual
+docker stop gitlab
+docker rm gitlab
+
+# Iniciar novo container
+docker run --detach \
+  --hostname gitlab.exemplo.com \
+  --publish 443:443 --publish 80:80 --publish 22:22 \
+  --name gitlab \
+  --restart always \
+  --volume $GITLAB_HOME/config:/etc/gitlab \
+  --volume $GITLAB_HOME/logs:/var/log/gitlab \
+  --volume $GITLAB_HOME/data:/var/opt/gitlab \
+  gitlab/gitlab-ce:latest
+```
+
+## Troubleshooting
+
+### Problemas Comuns
+
+```MERMAID
+mindmap
+    root((Problemas))
+        Conexão
+            Portas
+            Firewall
+            Proxy
+        Performance
+            CPU
+            RAM
+            Disco
+        Serviços
+            Nginx
+            Unicorn/Puma
+            Sidekiq
+```
+
+### Comandos Úteis
+
+```BASH
+# Verificar status
+sudo gitlab-ctl status
+
+# Ver logs
+sudo gitlab-ctl tail
+
+# Verificar configuração
+sudo gitlab-rake gitlab:check
+
+# Reparar permissões
+sudo gitlab-ctl reconfigure
+
+# Reiniciar serviços
+sudo gitlab-ctl restart
+```
+
+## Instalações Especializadas
+
+### Alta Disponibilidade
+
+```
++------------------------+
+|  ALTA DISPONIBILIDADE |
+|                       |
+| • PostgreSQL replicado|
+| • Redis redundante    |
+| • Load balancer       |
+| • Storage compartilhado|
+| • Geo replication     |
++------------------------+
+```
+
+### Geo Replication
+
+```MERMAID
+graph LR
+    A[GitLab Primário] -->|Replica| B[GitLab Secundário]
+    C[Usuários Região 1] -->|Acesso| A
+    D[Usuários Região 2] -->|Acesso| B
+```
+
+## GitLab.com vs Self-Hosted
+
+### Comparação
+
+```
++------------------------+
+|     GITLAB.COM        |
+| • Rápido para começar |
+| • Sem manutenção      |
+| • Atualizações auto.  |
+| • Planos gratuitos    |
+|                       |
+|     SELF-HOSTED       |
+| • Controle total      |
+| • Personalização      |
+| • Segurança interna   |
+| • Integração local    |
++------------------------+
+```
+
+### Quando Migrar para Self-Hosted
+
+* Quando sua equipe ultrapassar 100 usuários (potencial economia de custos)
+
+* Quando requisitos de compliance exigirem controle total dos dados
+
+* Quando precisar de integrações profundas com sistemas internos
+
+* Quando a performance se tornar crítica para grandes repositórios
+
+## Próximos Passos
+
+### Tópicos Relacionados
+
+* [Configuração do GitLab](gitlab-configuration.html)
+
+* [Configuração SSH no GitLab](gitlab-ssh-setup.html)
+
+* [Backup e Restauração](null)
+
+Tip:
+
+Dica Pro: Para ambientes de produção, sempre dimensione os recursos de acordo com o número de usuários e repositórios esperados. O GitLab pode consumir muitos recursos em instalações maiores.
+
+
+
+# Configuração do GitLab
+
+```
++------------------------+
+| GitLab Configuration  |
+|                       |
+| Personalização        |
+| Integração            |
+| Segurança             |
+| Performance           |
+|                       |
+| Adaptação Completa    |
++------------------------+
+```
+
+## Configuração Básica
+
+### Arquivo de Configuração Principal
+
+O arquivo principal de configuração do GitLab é o `/etc/gitlab/gitlab.rb` para instalações Omnibus. Todas as configurações são centralizadas neste arquivo.
+
+```BASH
+# Editar configuração
+sudo vim /etc/gitlab/gitlab.rb
+
+# Aplicar alterações
+sudo gitlab-ctl reconfigure
+```
+
+### URL Externa
+
+```RUBY
+# /etc/gitlab/gitlab.rb
+external_url 'https://gitlab.exemplo.com'
+```
+
+### Configurações de HTTPS
+
+```RUBY
+# /etc/gitlab/gitlab.rb
+# Habilitar HTTPS
+external_url 'https://gitlab.exemplo.com'
+nginx['redirect_http_to_https'] = true
+
+# Certificados Let's Encrypt
+letsencrypt['enable'] = true
+letsencrypt['contact_emails'] = ['admin@exemplo.com']
+
+# Certificados personalizados
+nginx['ssl_certificate'] = "/etc/gitlab/ssl/gitlab.exemplo.com.crt"
+nginx['ssl_certificate_key'] = "/etc/gitlab/ssl/gitlab.exemplo.com.key"
+```
+
+## Personalização da Interface
+
+### Logo e Aparência
+
+```RUBY
+# /etc/gitlab/gitlab.rb
+gitlab_rails['gitlab_logo'] = 'logo.png'
+gitlab_rails['gitlab_favicon'] = 'favicon.ico'
+
+# Cores e estilo
+gitlab_rails['brand_primary_color'] = '#1d75b3'
+gitlab_rails['brand_secondary_color'] = '#107a10'
+```
+
+### Página de Login
+
+```RUBY
+# /etc/gitlab/gitlab.rb
+gitlab_rails['gitlab_signin_enabled'] = true
+gitlab_rails['gitlab_signin_text'] = 'Bem-vindo ao GitLab da Empresa XYZ'
+```
+
+## Configuração de Email
+
+### SMTP
+
+```RUBY
+# /etc/gitlab/gitlab.rb
+gitlab_rails['smtp_enable'] = true
+gitlab_rails['smtp_address'] = "smtp.office365.com"
+gitlab_rails['smtp_port'] = 587
+gitlab_rails['smtp_user_name'] = "gitlab@empresa.com"
+gitlab_rails['smtp_password'] = "senha-segura"
+gitlab_rails['smtp_domain'] = "empresa.com"
+gitlab_rails['smtp_authentication'] = "login"
+gitlab_rails['smtp_enable_starttls_auto'] = true
+gitlab_rails['gitlab_email_from'] = 'gitlab@empresa.com'
+gitlab_rails['gitlab_email_reply_to'] = 'noreply@empresa.com'
+```
+
+### Testando Configuração de Email
+
+```BASH
+# Testar configuração de email
+sudo gitlab-rails console
+
+# No console Rails
+Notify.test_email('seu-email@exemplo.com', 'Assunto', 'Corpo').deliver_now
+```
+
+## Autenticação e Autorização
+
+### LDAP
+
+```RUBY
+# /etc/gitlab/gitlab.rb
+gitlab_rails['ldap_enabled'] = true
+gitlab_rails['ldap_servers'] = {
+  'main' => {
+    'label' => 'LDAP Corporativo',
+    'host' =>  'ldap.empresa.com',
+    'port' => 389,
+    'uid' => 'sAMAccountName',
+    'encryption' => 'plain',
+    'bind_dn' => 'CN=GitLab,OU=Service Accounts,DC=empresa,DC=com',
+    'password' => 'senha-ldap',
+    'active_directory' => true,
+    'base' => 'OU=Users,DC=empresa,DC=com',
+    'user_filter' => ''
+  }
+}
+```
+
+### OAuth (Google, GitHub, etc)
+
+```RUBY
+# /etc/gitlab/gitlab.rb
+gitlab_rails['omniauth_enabled'] = true
+gitlab_rails['omniauth_allow_single_sign_on'] = ['google_oauth2', 'github']
+gitlab_rails['omniauth_block_auto_created_users'] = false
+gitlab_rails['omniauth_providers'] = [
+  {
+    "name" => "google_oauth2",
+    "app_id" => "YOUR_APP_ID",
+    "app_secret" => "YOUR_APP_SECRET",
+    "args" => { "access_type" => "offline", "approval_prompt" => "" }
+  },
+  {
+    "name" => "github",
+    "app_id" => "YOUR_APP_ID",
+    "app_secret" => "YOUR_APP_SECRET",
+    "args" => { "scope" => "user:email" }
+  }
+]
+```
+
+## Configuração de Armazenamento
+
+### Armazenamento de Objetos (S3)
+
+```RUBY
+# /etc/gitlab/gitlab.rb
+gitlab_rails['object_store']['enabled'] = true
+gitlab_rails['object_store']['connection'] = {
+  'provider' => 'AWS',
+  'region' => 'us-east-1',
+  'aws_access_key_id' => 'SUA_ACCESS_KEY',
+  'aws_secret_access_key' => 'SUA_SECRET_KEY',
+  'endpoint' => 'https://s3.amazonaws.com'
+}
+
+# Configurar LFS, Artifacts, Uploads, etc
+gitlab_rails['lfs_object_store_enabled'] = true
+gitlab_rails['lfs_object_store_remote_directory'] = 'gitlab-lfs-objects'
+```
+
+### Configuração de Backup
+
+```RUBY
+# /etc/gitlab/gitlab.rb
+gitlab_rails['backup_path'] = "/var/opt/gitlab/backups"
+gitlab_rails['backup_archive_permissions'] = 0644
+gitlab_rails['backup_keep_time'] = 604800  # 7 dias em segundos
+```
+
+## Configuração de Performance
+
+### Recursos do Sistema
+
+```RUBY
+# /etc/gitlab/gitlab.rb
+puma['worker_processes'] = 4
+puma['max_threads'] = 4
+postgresql['shared_buffers'] = "2GB"
+postgresql['work_mem'] = "128MB"
+```
+
+### Caching com Redis
+
+```RUBY
+# /etc/gitlab/gitlab.rb
+gitlab_rails['redis_cache_instance'] = "redis://:password@redis-cache.example.com:6379/0"
+gitlab_rails['redis_queues_instance'] = "redis://:password@redis-queues.example.com:6379/0"
+gitlab_rails['redis_shared_state_instance'] = "redis://:password@redis-shared-state.example.com:6379/0"
+```
+
+## Configuração de Segurança
+
+### Restrições de Registro
+
+```RUBY
+# /etc/gitlab/gitlab.rb
+gitlab_rails['gitlab_signup_enabled'] = false
+gitlab_rails['gitlab_signin_enabled'] = true
+gitlab_rails['gitlab_restricted_visibility_levels'] = ['public']
+gitlab_rails['gitlab_default_projects_features_issues'] = true
+```
+
+### Configuração de Firewall
+
+```BASH
+# Configurar firewall (Ubuntu/Debian)
+sudo ufw allow http
+sudo ufw allow https
+sudo ufw allow OpenSSH
+
+# Verificar regras
+sudo ufw status
+```
+
+## Monitoramento e Logs
+
+### Prometheus e Grafana
+
+```RUBY
+# /etc/gitlab/gitlab.rb
+prometheus['enable'] = true
+grafana['enable'] = true
+grafana['admin_password'] = 'senha-segura'
+```
+
+### Configuração de Logs
+
+```RUBY
+# /etc/gitlab/gitlab.rb
+logging['logrotate_frequency'] = "daily"
+logging['logrotate_size'] = "10M"
+logging['logrotate_rotate'] = 30
+```
+
+## Integração com Runners
+
+### Registro de Runner
+
+```BASH
+# Instalar GitLab Runner
+curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh | sudo bash
+sudo apt-get install gitlab-runner
+
+# Registrar Runner
+sudo gitlab-runner register
+```
+
+### Configuração de Runner
+
+```TOML
+# /etc/gitlab-runner/config.toml
+[[runners]]
+  name = "docker-runner"
+  url = "https://gitlab.exemplo.com"
+  token = "TOKEN"
+  executor = "docker"
+  [runners.docker]
+    tls_verify = false
+    image = "docker:latest"
+    privileged = true
+```
+
+## Configurações Avançadas
+
+### Alta Disponibilidade
+
+```RUBY
+# /etc/gitlab/gitlab.rb no nó primário
+roles ['redis_master', 'redis_sentinel', 'postgres_master', 'pgbouncer', 'consul_server']
+postgresql['listen_address'] = '0.0.0.0'
+redis['bind'] = '0.0.0.0'
+```
+
+### Geo Replication
+
+```RUBY
+# /etc/gitlab/gitlab.rb no nó primário
+gitlab_rails['geo_primary_role'] = true
+
+# /etc/gitlab/gitlab.rb no nó secundário
+gitlab_rails['geo_secondary_role'] = true
+gitlab_rails['geo_secondary_name'] = 'secondary-site'
+gitlab_rails['geo_node_name'] = 'secondary-site'
+```
+
+## Próximos Passos
+
+### Tópicos Relacionados
+
+* [Configuração SSH no GitLab](gitlab-ssh-setup.html)
+
+* [Configuração CI/CD](null)
+
+* [Segurança no GitLab](null)
+
+* [Backup e Restauração](null)
+
+Tip:
+
+Dica Pro: Mantenha um ambiente de teste para validar alterações de configuração antes de aplicá-las em produção. Sempre faça backup antes de grandes mudanças.
+
+
+
+# Configuração SSH no GitLab
+
+```
++------------------------+
+|    GitLab SSH Setup   |
+|                       |
+| Autenticação Segura   |
+| Sem Senhas            |
+| Clonagem Rápida       |
+|                       |
+| Acesso Simplificado   |
++------------------------+
+```
+
+## Por que usar SSH?
+
+O SSH (Secure Shell) permite que você se conecte e autentique em servidores remotos, como o GitLab, de forma segura sem precisar digitar sua senha a cada operação.
+
+```MERMAID
+sequenceDiagram
+    participant U as Usuário
+    participant L as Local
+    participant G as GitLab
+    U->>L: Gera chave SSH
+    L->>G: Adiciona chave pública
+    U->>G: git push/pull
+    G->>L: Verifica chave
+    L->>G: Autenticado!
+```
+
+## Gerando Chaves SSH
+
+### No Linux/macOS
+
+```BASH
+# Gerar nova chave ED25519 (recomendado)
+ssh-keygen -t ed25519 -C "seu.email@exemplo.com"
+
+# Ou gerar RSA (compatibilidade)
+ssh-keygen -t rsa -b 4096 -C "seu.email@exemplo.com"
+```
+
+### No Windows
+
+```BASH
+# Com Git Bash
+ssh-keygen -t ed25519 -C "seu.email@exemplo.com"
+
+# Com PowerShell (OpenSSH)
+ssh-keygen -t ed25519 -C "seu.email@exemplo.com"
+```
+
+## Adicionando Chave ao SSH Agent
+
+### Linux/macOS
+
+```BASH
+# Iniciar o ssh-agent
+eval "$(ssh-agent -s)"
+
+# Adicionar chave
+ssh-add ~/.ssh/id_ed25519
+```
+
+### Windows
+
+```BASH
+# Git Bash
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+
+# PowerShell
+# Iniciar o serviço
+Start-Service ssh-agent
+# Adicionar chave
+ssh-add $env:USERPROFILE\.ssh\id_ed25519
+```
+
+## Adicionando Chave ao GitLab
+
+### Copiando a Chave Pública
+
+```BASH
+# Linux/macOS
+cat ~/.ssh/id_ed25519.pub | pbcopy  # macOS
+cat ~/.ssh/id_ed25519.pub | xclip -selection clipboard  # Linux
+
+# Windows
+cat ~/.ssh/id_ed25519.pub | clip
+```
+
+### Passos no GitLab
+
+1. Faça login no GitLab
+
+2. Clique no seu avatar (canto superior direito)
+
+3. Selecione "Preferences"
+
+4. Navegue até "SSH Keys"
+
+5. Cole sua chave pública
+
+6. Adicione um título descritivo (ex: "Laptop Trabalho")
+
+7. Clique em "Add key"
+
+```MERMAID
+graph TD
+    A[Login] --> B[Avatar]
+    B --> C[Preferences]
+    C --> D[SSH Keys]
+    D --> E[Add Key]
+    E --> F[Title + Key]
+    F --> G[Add Key Button]
+```
+
+## Testando a Conexão
+
+```BASH
+# Testar conexão SSH com GitLab
+ssh -T git@gitlab.com
+
+# Resposta esperada
+# Welcome to GitLab, @username!
+```
+
+## Usando SSH com Repositórios
+
+### Clonando via SSH
+
+```BASH
+# Clonar repositório
+git clone git@gitlab.com:grupo/projeto.git
+
+# Verificar remote
+git remote -v
+```
+
+### Alterando Repositório Existente
+
+```BASH
+# Mudar de HTTPS para SSH
+git remote set-url origin git@gitlab.com:grupo/projeto.git
+```
+
+## Configurações Avançadas
+
+### Múltiplas Chaves
+
+```BASH
+# ~/.ssh/config
+Host gitlab.com
+  HostName gitlab.com
+  User git
+  IdentityFile ~/.ssh/gitlab_key
+  IdentitiesOnly yes
+
+Host gitlab-trabalho
+  HostName gitlab.trabalho.com
+  User git
+  IdentityFile ~/.ssh/trabalho_key
+  IdentitiesOnly yes
+```
+
+### Segurança Adicional
+
+```BASH
+# Proteger chave com passphrase
+ssh-keygen -t ed25519 -C "seu.email@exemplo.com" -o -a 100
+
+# Usar ssh-agent para armazenar passphrase
+ssh-add ~/.ssh/id_ed25519
+```
+
+## Troubleshooting
+
+### Problemas Comuns
+
+```MERMAID
+mindmap
+    root((Problemas))
+        Permissões
+            Chave privada
+            Diretório .ssh
+        Conexão
+            Firewall
+            Proxy
+        Autenticação
+            Chave inválida
+            Usuário errado
+```
+
+### Soluções
+
+```BASH
+# Verificar permissões
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/id_ed25519
+chmod 644 ~/.ssh/id_ed25519.pub
+
+# Debug de conexão
+ssh -vT git@gitlab.com
+
+# Verificar chaves carregadas
+ssh-add -l
+```
+
+## Boas Práticas
+
+### Segurança
+
+```
++------------------------+
+|    BOAS PRÁTICAS      |
+|                       |
+| • Use ED25519         |
+| • Adicione passphrase |
+| • Backup seguro       |
+| • Revogue se perdida  |
+| • Renove anualmente   |
++------------------------+
+```
+
+### Organização
+
+```BASH
+# Nomenclatura clara
+id_ed25519_gitlab_pessoal
+id_ed25519_gitlab_trabalho
+
+# Comentários descritivos
+ssh-keygen -t ed25519 -C "Laptop Pessoal - GitLab"
+```
+
+## Próximos Passos
+
+### Tópicos Relacionados
+
+* [Configuração do GitLab](gitlab-configuration.html)
+
+* [GitLab CI Setup](null)
+
+* [Segurança no GitLab](null)
+
+Tip:
+
+Dica Pro: Configure o SSH uma vez e esqueça senhas para sempre. Seu fluxo de trabalho com Git ficará muito mais rápido e seguro.
 
 
 
