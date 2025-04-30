@@ -1,6 +1,6 @@
 # Git Pie 🥧
 
-Uma documentação abrangente sobre Git e práticas de versionamento de código, criada para desenvolvedores brasileiros.
+Uma documentação abrangente sobre Git e práticas de versionamento de código
 
 ## 📚 Sobre
 
@@ -50,15 +50,8 @@ Contribuições são bem-vindas! Para contribuir:
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## ✨ Agradecimentos
-
-- Comunidade Open Source
-- Contribuidores
-- JetBrains pela ferramenta Writerside
 
 ## 📬 Contato
 
-Para dúvidas, sugestões ou feedback, abra uma issue ou entre em contato através de [seu-email@exemplo.com].
+Para dúvidas, sugestões ou feedback, abra uma issue ou entre em contato através de [gustavojs417@gmail.com].
 
----
-Feito com 💙 pela comunidade brasileira de desenvolvedores
