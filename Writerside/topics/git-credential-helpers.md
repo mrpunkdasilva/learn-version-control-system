@@ -1,4 +1,4 @@
-# Git Credential Helpers: Gerenciamento Seguro de Credenciais
+# Git Credential Helpers
 
 ```ascii
 +------------------------+

@@ -1,0 +1,46 @@
+Thread 1/5 🧵
+
+🥧 Lançamos o Git Pie!
+Um guia completo de Git em PT-BR para devs brasileiros.
+Sem complicação, direto ao ponto.
+
+[URL]
+
+---
+2/5
+
+📚 O que você vai encontrar:
+• Fundamentos do Git
+• Workflows práticos
+• Resolução de conflitos
+• Dicas avançadas
+• Tudo em 🇧🇷
+
+---
+3/5
+
+💡 Ideal para:
+• Quem está começando
+• Quem quer se aprofundar
+• Times buscando padrões
+• Ninjas do Git
+
+---
+4/5
+
+🎯 Destaques:
+• Progressão lógica
+• Exemplos reais
+• Boas práticas
+• Automação
+• Enterprise ready
+
+---
+5/5
+
+🚀 Projeto open source!
+Contribua, compartilhe, evolua.
+
+Acesse agora: [URL]
+
+#Git #Desenvolvimento #OpenSource #TechBR

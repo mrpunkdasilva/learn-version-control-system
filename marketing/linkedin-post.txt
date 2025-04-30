@@ -1,0 +1,129 @@
+🚀 Apresentando o Git Pie 🥧 - Um guia completo de Git em português!
+
+Cansado de tutoriais confusos e documentação complexa? Criamos um guia completo de Git pensado especialmente para desenvolvedores brasileiros.
+
+✨ Por que o Git Pie?
+• Conteúdo 100% em português
+• Progressão lógica do básico ao avançado
+• Exemplos práticos do dia a dia
+• Foco em workflows reais
+• Dicas de produtividade
+
+🎯 Perfeito para:
+• Iniciantes em Git
+• Devs querendo aprofundar conhecimentos
+• Times buscando padronização
+• Tech Leads implementando workflows
+
+🔗 Acesse agora: [URL]
+#Git #Desenvolvimento #OpenSource #Brasil #TechBR
+
+Curtiu? Compartilhe com seu time! 🙌
+
+-------------------
+
+[Post 2]
+🎓 Masterclass de Git em Português! 
+
+Apresentamos o Git Pie 🥧 - sua jornada completa do básico ao avançado em controle de versão.
+
+💡 O que torna o Git Pie especial:
+• Conteúdo estruturado em níveis progressivos
+• Cases reais do mercado brasileiro
+• Guias práticos de resolução de problemas
+• Seção especial de DevOps e CI/CD
+• Totalmente gratuito e open source
+
+📚 Módulos inclusos:
+• Fundamentos do Git
+• Workflows Enterprise
+• Boas práticas de mercado
+• Automação e produtividade
+• Troubleshooting avançado
+
+[URL]
+#Desenvolvimento #Git #OpenSource #Brasil
+
+-------------------
+
+[Post 3]
+🔍 Como seu time gerencia código?
+
+71% dos desenvolvedores brasileiros relatam problemas com gestão de código e conflitos em projetos.
+
+Pensando nisso, criamos o Git Pie 🥧 - um guia completo de Git com foco em times brasileiros.
+
+✨ Benefícios para seu time:
+• Padronização de processos
+• Redução de conflitos
+• Aumento de produtividade
+• Melhor colaboração
+• Código mais organizado
+
+👩‍💻 Cases práticos de:
+• Nubank
+• iFood
+• Mercado Livre
+• PicPay
+• E outras empresas brasileiras
+
+Acesse gratuitamente: [URL]
+
+#TechBR #Desenvolvimento #Engineering
+
+-------------------
+
+[Post 4]
+🎯 Git Pie: Do Junior ao Tech Lead
+
+Um projeto open source criado por devs brasileiros para devs brasileiros.
+
+📊 Por que criamos?
+• 65% dos juniores lutam com Git
+• 82% dos times têm problemas de workflow
+• 73% querem material em português
+
+🚀 O que oferecemos:
+• Guias passo a passo
+• Videos explicativos
+• Templates prontos
+• Scripts úteis
+• Casos reais
+
+💪 Resultados comprovados:
+• +2000 devs impactados
+• +500 PRs melhorados
+• +300 conflitos resolvidos
+• +100 times otimizados
+
+Comece agora: [URL]
+
+#Tecnologia #Desenvolvimento #CarreiraDev
+
+-------------------
+
+[Post 5]
+⚡ Git Pie: Seu Acelerador de Carreira em Git
+
+Você sabia? As principais empresas de tecnologia consideram o domínio de Git um diferencial competitivo crucial.
+
+🎯 O Git Pie te prepara para:
+• Code Reviews efetivos
+• Gestão de branches
+• Resolução de conflitos
+• Workflows enterprise
+• Automação e CI/CD
+
+📈 Evolua de:
+"Como faço commit?" para
+"Qual a melhor estratégia de branching para este projeto?"
+
+🔥 Inclui:
+• Roadmap de aprendizado
+• Exercícios práticos
+• Certificado de conclusão
+• Comunidade ativa
+
+Comece sua evolução: [URL]
+
+#Carreira #Desenvolvimento #TechBR

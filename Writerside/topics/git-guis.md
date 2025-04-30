@@ -1,4 +1,4 @@
-# Interfaces Gráficas Git: Simplificando o Workflow
+# Interfaces Gráficas Git
 
 ```ascii
 +------------------------+

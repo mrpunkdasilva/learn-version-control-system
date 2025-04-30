@@ -1,0 +1,87 @@
+[Thread Set 1]
+1/4 📊 Dados interessantes:
+• 65% dos devs BR lutam com Git
+• 82% querem conteúdo em PT-BR
+• 73% precisam de exemplos práticos
+
+2/4 Por isso criamos o Git Pie 🥧
+Um guia completo de Git em português
+Do básico ao avançado
+100% gratuito
+
+3/4 Inclui:
+• Guias passo a passo
+• Cases reais
+• Templates prontos
+• Scripts úteis
+
+4/4 Pronto para dominar Git?
+Acesse agora: [URL]
+#DevBR #OpenSource
+
+-------------------
+
+[Thread Set 2]
+1/3 🎯 Git Pie: Seu mapa do tesouro do Git
+
+Chega de:
+• Commits bagunçados
+• Conflitos infinitos
+• Medo de rebase
+• Documentation anxiety
+
+2/3 O que você ganha:
+• Guia completo em PT-BR
+• Exemplos do mundo real
+• Templates prontos
+• Comunidade ativa
+
+3/3 Bônus:
+• Certificado
+• Material extra
+• Suporte da comunidade
+
+[URL]
+#Git #DevBR
+
+-------------------
+
+[Single Tweets]
+
+🔥 De "git commit" a "git rebase -i HEAD~3"
+Git Pie te leva do básico ao ninja
+100% em português
+Grátis e open source
+[URL]
+#Git #DevBR
+
+-------------------
+
+⚡ Git Pie: Seu professor particular de Git
+• Conteúdo estruturado
+• Exemplos práticos
+• Cases reais
+• 100% BR
+[URL]
+#Desenvolvimento
+
+-------------------
+
+🎯 Quer ser ninja em Git?
+Git Pie tem:
+• Roadmap claro
+• Exercícios práticos
+• Cases BR
+• Comunidade ativa
+[URL]
+#TechBR #Git
+
+-------------------
+
+💡 Git Pie: Aprenda Git do jeito certo
+• Em português
+• Na prática
+• Com exemplos reais
+• Totalmente grátis
+[URL]
+#OpenSource #DevBR

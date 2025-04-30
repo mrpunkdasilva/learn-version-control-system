@@ -1,4 +1,4 @@
-# Git LFS: Large File Storage
+# Git LFS
 
 ```ascii
 +------------------------+

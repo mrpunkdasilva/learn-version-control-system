@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8dc9b24-9799-4258-87a2-324d1f1c127f" name="Changes" comment="" />
+    <list default="true" id="f8dc9b24-9799-4258-87a2-324d1f1c127f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ARCH/arch.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Writerside/topics/Empty-MD-Topic.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Writerside/topics/contributing.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Writerside/topics/first-steps.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Writerside/topics/git-automation.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Writerside/topics/git-debug.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Writerside/topics/git-testing.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Writerside/topics/installation-setup.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Writerside/topics/welcome.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/marketing/linkedin-post.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/marketing/twitter-alternatives.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/marketing/twitter-posts.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Writerside/in.tree" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/in.tree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Writerside/topics/git-commands.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/git-commands.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Writerside/topics/git-credential-helpers.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/git-credential-helpers.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Writerside/topics/git-extensions.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/git-extensions.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Writerside/topics/git-guis.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/git-guis.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Writerside/topics/git-lfs.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/git-lfs.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Writerside/topics/intro.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/intro.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webHelpIN2-all.zip" beforeDir="false" afterPath="$PROJECT_DIR$/webHelpIN2-all.zip" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,33 +91,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Writerside.PDF (in).executor&quot;: &quot;Run&quot;,
-    &quot;Writerside.Web Archive (in).executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/mrpunkdasilva/WebstormProjects/learn-version-control-system/Writerside/images&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;stardust.markdown.MarkdownSplitEditorSuppressor:keyList&quot;: [
-      &quot;/home/mrpunkdasilva/WebstormProjects/learn-version-control-system/Writerside/topics/version-control-workflows.md&quot;
-    ]
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Writerside.PDF (in).executor": "Run",
+    "Writerside.Web Archive (in).executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/mrpunkdasilva/WebstormProjects/learn-version-control-system",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Writerside/images" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ARCH" />
       <recent name="$PROJECT_DIR$/Writerside/cfg" />
     </key>
   </component>
@@ -132,7 +151,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26053.12" />
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
       </set>
     </attachedChunks>
   </component>
@@ -148,6 +168,8 @@
       <workItem from="1745247522377" duration="7471000" />
       <workItem from="1745263015368" duration="4361000" />
       <workItem from="1745292808326" duration="758000" />
+      <workItem from="1745336952031" duration="302000" />
+      <workItem from="1745964947478" duration="6555000" />
     </task>
     <servers />
   </component>

@@ -1,4 +1,4 @@
-# Extensões Git: Ampliando Funcionalidades
+# Extensões Git
 
 ```ascii
 +------------------------+

@@ -1,4 +1,4 @@
-# Git Pie: Aprenda sobre VCS
+# Intro - Aprenda sobre VCS
 
 ![](american-pie.gif)
 

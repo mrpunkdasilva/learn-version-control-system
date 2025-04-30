@@ -1,4 +1,178 @@
-# Git Pie: Aprenda sobre VCS
+# Bem-vindo ao Git Pie 🥧
+
+## O que é o Git Pie?
+
+Git Pie é um guia completo sobre Git e controle de versão, criado especialmente para desenvolvedores brasileiros. Nossa proposta é ensinar Git de forma clara, objetiva e com uma pitada de humor.
+
+## Como Usar esta Documentação
+
+### Caminho Recomendado
+
+```MERMAID
+graph TD
+    A[Você está aqui] --> B[Fundamentos]
+    B --> C[Prática Diária]
+    C --> D[Workflows]
+    D --> E[Avançado]
+    E --> F[Enterprise]
+```
+
+### 1. Fundamentos First 🎯
+
+Se você está começando:
+
+* Conceitos Básicos do Git
+
+* Instalação e Configuração
+
+* Primeiros Comandos
+
+* Ciclo de Vida do Git
+
+### 2. Mão na Massa 💪
+
+Aprenda o dia a dia:
+
+* Commits e Boas Práticas
+
+* Branches na Prática
+
+* Resolução de Conflitos
+
+* Code Review
+
+### 3. Workflows na Vida Real 🌍
+
+Escolha seu caminho:
+
+* Trunk-Based Development
+
+* Feature Branch
+
+* Gitflow
+
+* Forking Workflow
+
+### 4. Nível Avançado 🚀
+
+Para os ninjas do Git:
+
+* Git Internals
+
+* Hooks e Automação
+
+* Recuperação com Reflog
+
+* Submodules e Subtrees
+
+### 5. Enterprise Ready 🏢
+
+Escalando para times grandes:
+
+* Governança
+
+* Segurança
+
+* Performance
+
+* Métricas
+
+## Highlights do Conteúdo
+
+### Must-Know ⭐
+
+```MERMAID
+mindmap
+    root((Essenciais))
+        Commits
+        Branches
+        Merge
+        Pull Request
+```
+
+### Quick Wins 🏃
+
+* Comandos mais usados
+
+* Fluxo básico de trabalho
+
+* Resolução de conflitos simples
+
+* Boas práticas de commit
+
+### Power Features 💪
+
+* Rebase interativo
+
+* Cherry-pick
+
+* Bisect
+
+* Hooks
+
+## Por Onde Começar?
+
+### Iniciante Total
+
+1. [Conceitos Básicos](git-basics.html)
+
+2. [Instalação e Setup](installation-setup.html)
+
+3. [Primeiros Passos](first-steps.html)
+
+### Já Uso Git
+
+1. [Boas Práticas de Commit](commit-conventions.html)
+
+2. [Estratégias de Branch](branching-strategies.html)
+
+3. [Workflows](workflow-automation.html)
+
+### Nível Avançado
+
+1. [Git Internals](git-internals.html)
+
+2. [Performance](null)
+
+3. [Patterns Enterprise](null)
+
+## Recursos Adicionais
+
+### Referência Rápida
+
+* [Cheat Sheet](cheat-sheet.html)
+
+* [Troubleshooting](git-troubleshooting.html)
+
+* [Glossário](glossary.html)
+
+### Ferramentas Recomendadas
+
+* [Git Tools](git-tools.html)
+
+* [CI/CD](ci-cd-integration.html)
+
+* [Segurança](git-security-best-practices.html)
+
+## Contribua!
+
+Este é um projeto open source e suas contribuições são bem-vindas!
+
+* Encontrou um erro?
+
+* Tem uma sugestão?
+
+* Quer adicionar conteúdo?
+
+[Aprenda como contribuir](contributing.html)
+
+Tip:
+
+Próximo Passo Recomendado: Comece pelos [Conceitos Básicos](git-basics.html) para construir uma base sólida.
+
+
+
+# Intro - Aprenda sobre VCS
 
 ![American pie](images/american-pie.gif)
 
@@ -313,6 +487,182 @@ Tip:
 Dica: Mantenha este capítulo como referência!
 Os conceitos básicos são fundamentais para entender
 as operações mais avançadas que virão pela frente.
+
+
+
+# História do Controle de Versão
+
+## A Evolução do Versionamento
+
+Tip:
+
+Como passamos de backups manuais para sistemas distribuídos modernos
+
+```MERMAID
+timeline
+    title História dos Sistemas de Controle de Versão
+    1972 : SCCS (Source Code Control System)
+         : Primeiro sistema real de controle de versão
+         : Desenvolvido para IBM System/370
+    1982 : RCS (Revision Control System)
+         : Operações mais rápidas
+         : Formato de arquivo mais eficiente
+    1986 : PVCS (Polytron Version Control System)
+         : Primeiro sistema comercial popular
+    1990 : CVS (Concurrent Versions System)
+         : Primeiro sistema com suporte a desenvolvimento paralelo
+         : Revolucionou o desenvolvimento em equipe
+    2000 : SVN (Subversion)
+         : Sucessor espiritual do CVS
+         : Tracking de diretórios e metadata
+         : Commits atômicos
+    2005 : Git & Mercurial
+         : Nascimento dos sistemas distribuídos modernos
+         : Git criado por Linus Torvalds
+         : Mercurial por Matt Mackall
+    2008 : GitHub Launch
+         : Git se torna mainstream
+         : Início da era social do código
+    2015 : Git dominação
+         : Torna-se o padrão da indústria
+         : Mais de 90% dos desenvolvedores usando Git
+```
+
+## A Linha do Tempo Detalhada
+
+### Anos 70-80: A Pré-História do Código
+
+#### SCCS (1972)
+
+* Criador: Marc Rochkind na Bell Labs
+
+* Inovações: * Primeiro sistema real de controle de versão * Introduziu o conceito de deltas reversos * Arquivos de histórico com extensão ,v
+
+* Limitações: * Apenas um arquivo por vez * Sem networking * Unix only
+
+```
+SCCS
+|-- arquivo,v
+|-- histórico
+`-- locks
+```
+
+#### RCS (1982)
+
+* Criador: Walter F. Tichy
+
+* Melhorias: * Sistema de branching primitivo * Melhor performance * Formato de arquivo mais eficiente * Comandos mais intuitivos
+
+* Ainda usado para: * Controle de configuração * Documentação * Projetos simples
+
+### Anos 90: A Revolução Centralizada
+
+#### CVS (1990)
+
+* Criador: Dick Grune
+
+* Revolucionou com: * Desenvolvimento paralelo * Operações em rede * Repositórios compartilhados * Tags e branches
+
+* Problemas famosos: * Commits não atômicos * Renomeação de arquivos complicada * Bugs de merge
+
+```
+    CVS Server
+    /    |    \
+Client Client Client
+```
+
+#### SVN (2000)
+
+* Criador: CollabNet
+
+* Avanços: * Commits verdadeiramente atômicos * Melhor handling de binários * Renomeação e move de arquivos * Metadados versionados
+
+* Ainda popular em: * Empresas tradicionais * Projetos com muitos binários * Sistemas legados
+
+### Anos 2000+: A Era Distribuída
+
+#### Git (2005)
+
+* Criador: Linus Torvalds
+
+* Motivação: * BitKeeper removeu licença gratuita do kernel Linux * Necessidade de sistema rápido e distribuído
+
+* Inovações: * Modelo distribuído * Branching super leve * Staging area * Integridade criptográfica
+
+* Por que dominou: * Performance excepcional * GitHub e social coding * Flexibilidade extrema * Workflow distribuído
+
+```
+Git Flow
+main
+ |\
+ | feature
+ |/
+ |\
+ | hotfix
+ |/
+```
+
+#### Mercurial (2005)
+
+* Criador: Matt Mackall
+
+* Diferencias: * Interface mais amigável * Curva de aprendizado menor * Extensibilidade via Python
+
+* Usado por: * Facebook * Mozilla * Google (parcialmente)
+
+### Anos 2010+: A Era Social
+
+#### GitHub (2008)
+
+* Transformou Git em plataforma social
+
+* Pull Requests revolucionaram code review
+
+* Actions trouxeram CI/CD integrado
+
+* Copilot iniciou era da IA no código
+
+#### GitLab (2011)
+
+* Alternativa self-hosted ao GitHub
+
+* CI/CD integrado desde o início
+
+* DevOps como plataforma
+
+## Lições da História
+
+### O que Aprendemos
+
+1. Evolução Constante
+
+* De single-file para repositórios completos
+
+* De local para distribuído
+
+* De linha de comando para interfaces gráficas
+
+2. Padrões que Permaneceram
+
+* Importância do histórico
+
+* Necessidade de branches
+
+* Valor da colaboração
+
+3. Tendências Futuras
+
+* Integração com IA
+
+* Automação crescente
+
+* Colaboração em tempo real
+
+## Conclusão
+
+A história dos sistemas de controle de versão é uma jornada fascinante de evolução tecnológica. De simples backups numerados até sistemas distribuídos com IA, cada era trouxe suas inovações e aprendizados. Como diria a mãe do Stifler: "As festas podem mudar, mas a diversão continua a mesma!"
+
+E lembre-se: conhecer a história nos ajuda a entender melhor as ferramentas que usamos hoje e apreciar como chegamos até aqui. Afinal, se hoje podemos fazer um git push sem pensar duas vezes, é porque muita gente quebrou a cabeça com SCCS e CVS antes!
 
 
 
@@ -1549,182 +1899,6 @@ Não existe sistema perfeito - existe o sistema certo para cada situação. É c
 * Um mega festival com várias stages (Distribuído)
 
 A escolha depende do seu projeto, equipe e necessidades. E lembre-se: o importante é o código (ou a festa) fluir bem!
-
-
-
-# História do Controle de Versão
-
-## A Evolução do Versionamento
-
-Tip:
-
-Como passamos de backups manuais para sistemas distribuídos modernos
-
-```MERMAID
-timeline
-    title História dos Sistemas de Controle de Versão
-    1972 : SCCS (Source Code Control System)
-         : Primeiro sistema real de controle de versão
-         : Desenvolvido para IBM System/370
-    1982 : RCS (Revision Control System)
-         : Operações mais rápidas
-         : Formato de arquivo mais eficiente
-    1986 : PVCS (Polytron Version Control System)
-         : Primeiro sistema comercial popular
-    1990 : CVS (Concurrent Versions System)
-         : Primeiro sistema com suporte a desenvolvimento paralelo
-         : Revolucionou o desenvolvimento em equipe
-    2000 : SVN (Subversion)
-         : Sucessor espiritual do CVS
-         : Tracking de diretórios e metadata
-         : Commits atômicos
-    2005 : Git & Mercurial
-         : Nascimento dos sistemas distribuídos modernos
-         : Git criado por Linus Torvalds
-         : Mercurial por Matt Mackall
-    2008 : GitHub Launch
-         : Git se torna mainstream
-         : Início da era social do código
-    2015 : Git dominação
-         : Torna-se o padrão da indústria
-         : Mais de 90% dos desenvolvedores usando Git
-```
-
-## A Linha do Tempo Detalhada
-
-### Anos 70-80: A Pré-História do Código
-
-#### SCCS (1972)
-
-* Criador: Marc Rochkind na Bell Labs
-
-* Inovações: * Primeiro sistema real de controle de versão * Introduziu o conceito de deltas reversos * Arquivos de histórico com extensão ,v
-
-* Limitações: * Apenas um arquivo por vez * Sem networking * Unix only
-
-```
-SCCS
-|-- arquivo,v
-|-- histórico
-`-- locks
-```
-
-#### RCS (1982)
-
-* Criador: Walter F. Tichy
-
-* Melhorias: * Sistema de branching primitivo * Melhor performance * Formato de arquivo mais eficiente * Comandos mais intuitivos
-
-* Ainda usado para: * Controle de configuração * Documentação * Projetos simples
-
-### Anos 90: A Revolução Centralizada
-
-#### CVS (1990)
-
-* Criador: Dick Grune
-
-* Revolucionou com: * Desenvolvimento paralelo * Operações em rede * Repositórios compartilhados * Tags e branches
-
-* Problemas famosos: * Commits não atômicos * Renomeação de arquivos complicada * Bugs de merge
-
-```
-    CVS Server
-    /    |    \
-Client Client Client
-```
-
-#### SVN (2000)
-
-* Criador: CollabNet
-
-* Avanços: * Commits verdadeiramente atômicos * Melhor handling de binários * Renomeação e move de arquivos * Metadados versionados
-
-* Ainda popular em: * Empresas tradicionais * Projetos com muitos binários * Sistemas legados
-
-### Anos 2000+: A Era Distribuída
-
-#### Git (2005)
-
-* Criador: Linus Torvalds
-
-* Motivação: * BitKeeper removeu licença gratuita do kernel Linux * Necessidade de sistema rápido e distribuído
-
-* Inovações: * Modelo distribuído * Branching super leve * Staging area * Integridade criptográfica
-
-* Por que dominou: * Performance excepcional * GitHub e social coding * Flexibilidade extrema * Workflow distribuído
-
-```
-Git Flow
-main
- |\
- | feature
- |/
- |\
- | hotfix
- |/
-```
-
-#### Mercurial (2005)
-
-* Criador: Matt Mackall
-
-* Diferencias: * Interface mais amigável * Curva de aprendizado menor * Extensibilidade via Python
-
-* Usado por: * Facebook * Mozilla * Google (parcialmente)
-
-### Anos 2010+: A Era Social
-
-#### GitHub (2008)
-
-* Transformou Git em plataforma social
-
-* Pull Requests revolucionaram code review
-
-* Actions trouxeram CI/CD integrado
-
-* Copilot iniciou era da IA no código
-
-#### GitLab (2011)
-
-* Alternativa self-hosted ao GitHub
-
-* CI/CD integrado desde o início
-
-* DevOps como plataforma
-
-## Lições da História
-
-### O que Aprendemos
-
-1. Evolução Constante
-
-* De single-file para repositórios completos
-
-* De local para distribuído
-
-* De linha de comando para interfaces gráficas
-
-2. Padrões que Permaneceram
-
-* Importância do histórico
-
-* Necessidade de branches
-
-* Valor da colaboração
-
-3. Tendências Futuras
-
-* Integração com IA
-
-* Automação crescente
-
-* Colaboração em tempo real
-
-## Conclusão
-
-A história dos sistemas de controle de versão é uma jornada fascinante de evolução tecnológica. De simples backups numerados até sistemas distribuídos com IA, cada era trouxe suas inovações e aprendizados. Como diria a mãe do Stifler: "As festas podem mudar, mas a diversão continua a mesma!"
-
-E lembre-se: conhecer a história nos ajuda a entender melhor as ferramentas que usamos hoje e apreciar como chegamos até aqui. Afinal, se hoje podemos fazer um git push sem pensar duas vezes, é porque muita gente quebrou a cabeça com SCCS e CVS antes!
 
 
 
@@ -6768,6 +6942,176 @@ graph TD
 
 
 
+# Instalação e Setup
+
+## Instalação do Git
+
+### Windows
+
+1. Baixe o instalador em https://git-scm.com/download/windows
+
+2. Execute o arquivo .exe baixado
+
+3. Siga o assistente de instalação mantendo as opções padrão
+
+4. Verifique a instalação abrindo o terminal:
+
+```BASH
+git --version
+```
+
+### Linux (Debian/Ubuntu)
+
+```BASH
+sudo apt-get update
+sudo apt-get install git
+```
+
+### macOS
+
+1. Via Homebrew:
+
+```BASH
+brew install git
+```
+
+1. Ou baixe o instalador em https://git-scm.com/download/mac
+
+## Configuração Inicial
+
+### Identidade
+
+Configure seu nome e email que serão usados nos commits:
+
+```BASH
+git config --global user.name "Seu Nome"
+git config --global user.email "seu.email@exemplo.com"
+```
+
+### Editor Padrão
+
+Configure seu editor de texto preferido:
+
+```BASH
+git config --global core.editor "code --wait"  # VS Code
+git config --global core.editor "vim"          # Vim
+git config --global core.editor "nano"         # Nano
+```
+
+### Verificar Configurações
+
+Liste todas as configurações atuais:
+
+```BASH
+git config --list
+```
+
+## Configurações Recomendadas
+
+### Aliases Úteis
+
+```BASH
+git config --global alias.st status
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+```
+
+### Merge e Diff
+
+```BASH
+git config --global merge.tool vimdiff
+git config --global diff.tool vimdiff
+```
+
+### Final de Linha
+
+Windows:
+
+```BASH
+git config --global core.autocrlf true
+```
+
+Linux/macOS:
+
+```BASH
+git config --global core.autocrlf input
+```
+
+## Integrações
+
+### Configurar SSH
+
+1. Gerar chave SSH:
+
+```BASH
+ssh-keygen -t ed25519 -C "seu.email@exemplo.com"
+```
+
+1. Adicionar ao ssh-agent:
+
+```BASH
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+
+1. Copiar chave pública:
+
+```BASH
+cat ~/.ssh/id_ed25519.pub
+```
+
+1. Adicionar a chave no GitHub/GitLab
+
+### Autenticação HTTPS
+
+Para evitar digitar senha constantemente:
+
+```BASH
+git config --global credential.helper store  # Permanente
+git config --global credential.helper cache  # Temporário
+```
+
+## Troubleshooting
+
+### Problemas Comuns
+
+1. Git não reconhecido no terminal
+
+* Verifique a variável PATH
+
+* Reinstale o Git
+
+2. Erro de autenticação
+
+* Verifique suas credenciais
+
+* Regenere suas chaves SSH
+
+* Use token de acesso pessoal
+
+3. Problemas de configuração
+
+* Reset configurações: `git config --global --reset`
+
+* Reconfigurar do zero
+
+## Próximos Passos
+
+1. Verifique a instalação
+
+2. Configure sua identidade
+
+3. Configure seu editor
+
+4. Configure suas chaves SSH
+
+5. Teste um clone de repositório
+
+Agora você está pronto para começar a usar o Git. Continue para [Primeiros Passos](first-steps.html).
+
+
+
 # História do Git
 
 ![The simpsons homer](images/the-simpsons-homer.gif)
@@ -7476,6 +7820,425 @@ Dica: Pratique! Git é como andar de bicicleta, só se aprende fazendo
 
 
 
+# Primeiros Passos
+
+## Iniciando um Repositório
+
+### Novo Repositório
+
+```BASH
+mkdir meu-projeto
+cd meu-projeto
+git init
+```
+
+### Clonar Repositório Existente
+
+```BASH
+git clone https://github.com/usuario/repositorio.git
+git clone git@github.com:usuario/repositorio.git  # Via SSH
+```
+
+## Ciclo Básico do Git
+
+### Status do Repositório
+
+```BASH
+git status  # Ver estado atual
+git log     # Ver histórico
+```
+
+### Adicionando Arquivos
+
+```BASH
+git add arquivo.txt          # Arquivo específico
+git add .                    # Todos os arquivos
+git add diretorio/*         # Todo conteúdo do diretório
+```
+
+### Criando Commits
+
+```BASH
+git commit -m "Mensagem descritiva do commit"
+git commit -am "Commit com add automático"
+```
+
+## Trabalhando com Branches
+
+### Gerenciamento Básico
+
+```BASH
+git branch                   # Listar branches
+git branch nova-feature     # Criar branch
+git checkout nova-feature   # Mudar de branch
+git checkout -b outra-feature # Criar e mudar
+```
+
+### Merge de Branches
+
+```BASH
+git checkout main           # Volta para main
+git merge nova-feature     # Merge da feature
+```
+
+## Sincronização com Remoto
+
+### Configurar Remoto
+
+```BASH
+git remote add origin https://github.com/usuario/repo.git
+git remote -v              # Listar remotos
+```
+
+### Push e Pull
+
+```BASH
+git push origin main      # Enviar alterações
+git pull origin main      # Receber alterações
+```
+
+## Boas Práticas
+
+### Commits
+
+1. Mensagens claras e descritivas
+
+2. Um commit por alteração lógica
+
+3. Prefixos comuns:
+
+* feat: nova funcionalidade
+
+* fix: correção de bug
+
+* docs: documentação
+
+* style: formatação
+
+* refactor: refatoração
+
+* test: testes
+
+### Branches
+
+1. Nomes descritivos
+
+2. Use prefixos:
+
+* feature/
+
+* bugfix/
+
+* hotfix/
+
+* release/
+
+## Fluxo de Trabalho Básico
+
+1. Atualizar branch principal
+
+```BASH
+git checkout main
+git pull origin main
+```
+
+1. Criar branch de feature
+
+```BASH
+git checkout -b feature/nova-funcionalidade
+```
+
+1. Fazer alterações
+
+```BASH
+git add .
+git commit -m "feat: adiciona nova funcionalidade"
+```
+
+1. Enviar alterações
+
+```BASH
+git push origin feature/nova-funcionalidade
+```
+
+## Resolução de Problemas
+
+### Reverter Alterações
+
+```BASH
+git checkout -- arquivo.txt  # Descarta alterações
+git reset --hard HEAD       # Reseta para último commit
+git revert commit-hash      # Reverte commit específico
+```
+
+### Correções Comuns
+
+```BASH
+git commit --amend          # Corrigir último commit
+git reset HEAD arquivo.txt  # Remover do stage
+```
+
+## Próximos Passos
+
+1. Pratique os comandos básicos
+
+2. Crie alguns repositórios de teste
+
+3. Experimente trabalhar com branches
+
+4. Faça push/pull com repositório remoto
+
+5. Avance para [Workflows](workflow-automation.html)
+
+## Exercícios Práticos
+
+1. Crie um novo repositório
+
+2. Adicione alguns arquivos
+
+3. Faça commits
+
+4. Crie uma branch
+
+5. Faça merge
+
+6. Sincronize com GitHub
+
+Lembre-se: a prática leva à perfeição. Quanto mais você usar estes comandos, mais natural o fluxo se tornará.
+
+
+
+# Git Debug
+
+```
++------------------------+
+|      Git Debug        |
+|                       |
+| Diagnóstico           |
+| Troubleshooting       |
+| Resolução             |
+|                       |
+| Debugging Avançado    |
++------------------------+
+```
+
+## Ferramentas de Debug
+
+### Variáveis de Ambiente
+
+```BASH
+# Debug geral
+GIT_TRACE=1
+
+# Debug específico
+GIT_TRACE_PACKET=1     # Protocolo
+GIT_TRACE_PACK_ACCESS=1 # Acesso packfile
+GIT_TRACE_PERFORMANCE=1 # Performance
+GIT_TRACE_SETUP=1      # Setup
+GIT_CURL_VERBOSE=1     # HTTP
+```
+
+### Comandos Essenciais
+
+```MERMAID
+mindmap
+    root((Debug))
+        Verificação
+            fsck
+            verify-pack
+        Logs
+            reflog
+            log
+        Estado
+            status
+            remote -v
+```
+
+## Técnicas de Diagnóstico
+
+### Verificação de Integridade
+
+```BASH
+# Verificar repositório
+git fsck --full
+
+# Verificar objetos
+git verify-pack -v .git/objects/pack/*.idx
+
+# Verificar refs
+git for-each-ref --verify
+```
+
+### Análise de Logs
+
+```
++------------------------+
+|    NÍVEIS DE LOG      |
+|                       |
+| • Trace              |
+| • Debug              |
+| • Info               |
+| • Warning            |
+| • Error              |
++------------------------+
+```
+
+## Problemas Comuns
+
+### Network Issues
+
+```MERMAID
+sequenceDiagram
+    participant C as Client
+    participant S as Server
+    C->>S: git fetch
+    S-->>C: timeout
+    Note over C,S: Debug com GIT_CURL_VERBOSE
+    C->>S: retry com trace
+```
+
+### Resolução
+
+```BASH
+# Problemas de rede
+GIT_CURL_VERBOSE=1 git clone <url>
+
+# Problemas de autenticação
+ssh -vT git@github.com
+
+# Problemas de objeto
+git prune && git gc
+```
+
+## Debug Avançado
+
+### Análise de Performance
+
+```BASH
+# Trace detalhado
+GIT_TRACE_PERFORMANCE=1 git status
+
+# Estatísticas de objetos
+git count-objects -v
+
+# Profiling
+git maintenance run --task=gc --verbose
+```
+
+### Ferramentas Externas
+
+```MERMAID
+mindmap
+    root((Tools))
+        Git
+            git-bisect
+            git-blame
+        IDE
+            debugger
+            profiler
+        Sistema
+            strace
+            dtrace
+```
+
+## Boas Práticas
+
+### Prevenção
+
+```
++------------------------+
+|    CHECKLIST          |
+|                       |
+| • Backup regular     |
+| • Verificações       |
+| • Manutenção        |
+| • Monitoramento     |
+| • Documentação      |
++------------------------+
+```
+
+### Workflow de Debug
+
+1. Identificar sintomas
+
+2. Coletar informações
+
+3. Reproduzir problema
+
+4. Analisar logs
+
+5. Aplicar solução
+
+6. Verificar resolução
+
+## Automação
+
+### Scripts Úteis
+
+```BASH
+#!/bin/bash
+# Debug completo
+debug_git() {
+    export GIT_TRACE=1
+    export GIT_TRACE_PERFORMANCE=1
+    export GIT_TRACE_PACKET=1
+    git "$@"
+    unset GIT_TRACE GIT_TRACE_PERFORMANCE GIT_TRACE_PACKET
+}
+```
+
+### Monitoramento
+
+```MERMAID
+graph TD
+    A[Coleta] -->|Logs| B[Análise]
+    B -->|Alertas| C[Ação]
+    C -->|Resolução| D[Verificação]
+```
+
+## Recuperação
+
+### Dados Perdidos
+
+```BASH
+# Recuperar commits deletados
+git reflog
+
+# Recuperar arquivos deletados
+git fsck --lost-found
+
+# Restaurar estado anterior
+git reset --hard HEAD@{1}
+```
+
+### Corrupção
+
+```BASH
+# Verificar e reparar
+git fsck --full
+git prune
+git gc --aggressive
+
+# Clonar novamente se necessário
+git clone --mirror <url>
+```
+
+## Próximos Passos
+
+### Tópicos Relacionados
+
+* [Git Bisect](git-bisect.html)
+
+* [Git Performance](null)
+
+* [Git Maintenance](null)
+
+Tip:
+
+Dica Pro: Mantenha um registro de problemas encontrados e suas soluções para referência futura.
+
+
+
 # Fluxo de Trabalho do Git
 
 ## Iniciando um Repositório
@@ -8171,7 +8934,9 @@ Dica Pro: Mantenha esse cheat sheet sempre à mão. Com o tempo você vai decora
 
 * [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
 
-## 📑 Tabela Completa de Comandos
+
+
+# Tabela Completa de Comandos
 
 | Comando Git |Descrição |Categoria |
 -------------------------------------
@@ -10425,6 +11190,249 @@ Dica Pro: Use `git submodule foreach` para executar comandos em todos os submód
 
 
 
+# Git Subtrees: Alternativa Flexível aos Submódulos
+
+```
++------------------------+
+|     Git Subtrees      |
+|                       |
+| Project Integration   |
+| Code Sharing          |
+| History Preservation  |
+|                       |
+| Flexible Management   |
++------------------------+
+```
+
+## Conceitos Básicos
+
+### O que são Subtrees?
+
+```MERMAID
+graph TD
+    A[Projeto Principal] -->|Incorpora| B[Código Fonte]
+    B -->|Com| C[Histórico Completo]
+    A -->|Mantém| D[Independência]
+    D -->|Com| E[Updates Controlados]
+```
+
+### Estrutura
+
+```
+projeto/
+├── .git/
+├── src/
+└── lib/
+    └── external/
+        └── [código incorporado]
+```
+
+## Comandos Essenciais
+
+### Operações Básicas
+
+```BASH
+# Adicionar subtree
+git subtree add --prefix=lib/demo https://github.com/user/demo main --squash
+
+# Atualizar subtree
+git subtree pull --prefix=lib/demo https://github.com/user/demo main --squash
+
+# Enviar mudanças
+git subtree push --prefix=lib/demo https://github.com/user/demo main
+```
+
+### Split e Merge
+
+```BASH
+# Extrair subtree como branch
+git subtree split --prefix=lib/demo -b temp_branch
+
+# Mesclar mudanças
+git subtree merge --prefix=lib/demo temp_branch
+```
+
+## Gerenciamento
+
+### Fluxo de Trabalho
+
+```MERMAID
+sequenceDiagram
+    participant M as Main Project
+    participant S as Subtree
+    
+    M->>S: git subtree add
+    M->>M: Development
+    M->>S: git subtree push
+    S->>S: Updates
+    S->>M: git subtree pull
+```
+
+### Estratégias de Atualização
+
+```BASH
+# Pull com squash
+git subtree pull --prefix=lib/demo \
+    https://github.com/user/demo main --squash
+
+# Pull preservando histórico
+git subtree pull --prefix=lib/demo \
+    https://github.com/user/demo main
+```
+
+## Boas Práticas
+
+### Recomendações
+
+```
++------------------------+
+|    BOAS PRÁTICAS      |
+|                       |
+| • Prefixos claros    |
+| • Squash quando útil |
+| • Updates regulares  |
+| • Documentação       |
+| • Branches separados |
++------------------------+
+```
+
+### Organização
+
+```BASH
+# Criar alias para comandos comuns
+git config alias.sba 'subtree add'
+git config alias.sbp 'subtree pull'
+git config alias.sbs 'subtree push'
+```
+
+## Comparação com Submodules
+
+### Vantagens e Desvantagens
+
+```MERMAID
+mindmap
+    root((Subtrees vs Submodules))
+        Subtrees
+            Código integrado
+            Histórico unificado
+            Mais simples
+        Submodules
+            Referências exatas
+            Menor repositório
+            Mais complexo
+```
+
+### Quando Usar
+
+```
++------------------------+
+|    SUBTREES           |
+| • Código estável     |
+| • Mudanças raras     |
+| • Time único         |
+|                      |
+|    SUBMODULES        |
+| • Updates frequentes |
+| • Times separados    |
+| • Versões exatas     |
++------------------------+
+```
+
+## Troubleshooting
+
+### Problemas Comuns
+
+```MERMAID
+mindmap
+    root((Problemas))
+        Conflitos
+            Merge manual
+            Resolução local
+        Histórico
+            Squash perdido
+            Commits duplicados
+        Performance
+            Repositório grande
+            Clone lento
+```
+
+### Soluções
+
+```BASH
+# Resolver conflitos
+git checkout --theirs lib/demo
+git add lib/demo
+git commit
+
+# Limpar histórico
+git subtree split --prefix=lib/demo --rejoin
+```
+
+## Workflows Avançados
+
+### Contribuição Upstream
+
+```MERMAID
+graph TD
+    A[Desenvolvimento Local] -->|Split| B[Branch Temporária]
+    B -->|Push| C[Repositório Original]
+    C -->|Pull Request| D[Merge Upstream]
+```
+
+### Automação
+
+```BASH
+#!/bin/sh
+# Script de atualização
+for subtree in lib/*; do
+    if [ -d "$subtree" ]; then
+        prefix="lib/$(basename $subtree)"
+        remote="https://github.com/user/$(basename $subtree)"
+        git subtree pull --prefix=$prefix $remote main --squash
+    fi
+done
+```
+
+## Dicas Avançadas
+
+### Performance
+
+```BASH
+# Split otimizado
+git subtree split --prefix=lib/demo \
+    --onto=temp_branch -b new_branch
+
+# Push seletivo
+git subtree push --prefix=lib/demo \
+    origin branch_name --rejoin
+```
+
+### Manutenção
+
+```BASH
+# Verificar subtrees
+git log | grep -e "git-subtree-dir:"
+
+# Limpar referências antigas
+git gc --aggressive --prune=now
+```
+
+## Próximos Passos
+
+### Tópicos Relacionados
+
+* [Git Submodules](git-submodules.html)
+
+* [Monorepo Management](monorepo-management.html)
+
+* [Git Advanced](git-advanced.html)
+
+Tip:
+
+Dica Pro: Use `--squash` ao adicionar subtrees para manter o histórico limpo, mas considere omiti-lo se precisar manter o histórico completo para referência.
+
+
+
 # Git Worktrees: Trabalhando com Múltiplos Diretórios
 
 ```
@@ -10912,11 +11920,11 @@ mindmap
 
 ### Tópicos Relacionados
 
-* [Git Debug](null)
+* [Git Debug](git-debug.html)
 
-* [Git Testing](null)
+* [Git Testing](git-testing.html)
 
-* [Git Automation](null)
+* [Git Automation](git-automation.html)
 
 Tip:
 
@@ -11193,6 +12201,535 @@ Dica Pro: Sempre teste filter-branch em um clone do repositório antes de aplica
 
 
 
+# Git Testing: Garantindo Qualidade no Versionamento
+
+```
++------------------------+
+|     Git Testing       |
+|                       |
+| Testes Automatizados  |
+| Validação             |
+| Qualidade             |
+|                       |
+| Confiabilidade        |
++------------------------+
+```
+
+## Fundamentos
+
+### Tipos de Testes
+
+```MERMAID
+mindmap
+    root((Testes))
+        Unitários
+            Commits
+            Hooks
+        Integração
+            Workflows
+            Pipelines
+        E2E
+            Cenários
+            Fluxos
+```
+
+### Framework de Testes
+
+```BASH
+# Estrutura básica
+tests/
+├── unit/
+│   ├── commit_test.sh
+│   └── hook_test.sh
+├── integration/
+│   ├── workflow_test.sh
+│   └── pipeline_test.sh
+└── e2e/
+    ├── scenarios/
+    └── flows/
+```
+
+## Testes Unitários
+
+### Testando Commits
+
+```BASH
+#!/bin/bash
+test_commit_message() {
+    message="$1"
+    if ! echo "$message" | grep -qE "^(feat|fix|docs|style|refactor|test|chore):"; then
+        return 1
+    fi
+    return 0
+}
+```
+
+### Testando Hooks
+
+```BASH
+#!/bin/bash
+test_pre_commit_hook() {
+    # Setup
+    cp .git/hooks/pre-commit{,.bak}
+    
+    # Test
+    ./pre-commit.sh
+    result=$?
+    
+    # Cleanup
+    mv .git/hooks/pre-commit{.bak,}
+    return $result
+}
+```
+
+## Testes de Integração
+
+### Workflow Tests
+
+```MERMAID
+graph TD
+    A[Setup] -->|Prepare| B[Execute]
+    B -->|Validate| C[Assert]
+    C -->|Cleanup| D[Report]
+```
+
+### Pipeline Tests
+
+```YAML
+name: Git Integration Tests
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run Tests
+        run: |
+          ./run_integration_tests.sh
+```
+
+## Testes E2E
+
+### Cenários Comuns
+
+```BASH
+#!/bin/bash
+test_branch_workflow() {
+    # Setup
+    git checkout -b feature/test
+    
+    # Test
+    echo "test" > file.txt
+    git add file.txt
+    git commit -m "test: add file"
+    git push origin feature/test
+    
+    # Assert
+    git log --oneline | grep "test: add file"
+    
+    # Cleanup
+    git checkout main
+    git branch -D feature/test
+}
+```
+
+### Automação E2E
+
+```PYTHON
+def test_git_workflow():
+    """
+    Teste completo de workflow Git
+    """
+    # Setup
+    repo = setup_test_repo()
+    
+    # Execute
+    create_branch(repo)
+    make_changes(repo)
+    create_pr(repo)
+    
+    # Assert
+    assert verify_pr(repo)
+    
+    # Cleanup
+    cleanup_repo(repo)
+```
+
+## Ferramentas
+
+### Test Runners
+
+```MERMAID
+mindmap
+    root((Tools))
+        Bash
+            shunit2
+            bats
+        Python
+            pytest
+            unittest
+        CI/CD
+            Jenkins
+            GitHub Actions
+```
+
+### Relatórios
+
+```
++------------------------+
+|    TEST REPORT        |
+|                       |
+| ✓ Commit Tests       |
+| ✓ Hook Tests         |
+| ✓ Workflow Tests     |
+| ✗ Pipeline Tests     |
+| ✓ E2E Tests          |
++------------------------+
+```
+
+## Boas Práticas
+
+### Organização
+
+1. Estrutura clara de testes
+
+2. Nomenclatura consistente
+
+3. Isolamento de testes
+
+4. Limpeza após testes
+
+5. Documentação adequada
+
+### Automação
+
+```BASH
+#!/bin/bash
+# Script de teste completo
+run_all_tests() {
+    echo "Running unit tests..."
+    ./run_unit_tests.sh
+    
+    echo "Running integration tests..."
+    ./run_integration_tests.sh
+    
+    echo "Running E2E tests..."
+    ./run_e2e_tests.sh
+}
+```
+
+## CI/CD Integration
+
+### GitHub Actions
+
+```YAML
+name: Git Tests
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Unit Tests
+        run: ./run_unit_tests.sh
+      - name: Integration Tests
+        run: ./run_integration_tests.sh
+      - name: E2E Tests
+        run: ./run_e2e_tests.sh
+```
+
+## Próximos Passos
+
+### Tópicos Relacionados
+
+* [Git Automation](git-automation.html)
+
+* [Git CI/CD](null)
+
+* [Git Quality](null)
+
+Tip:
+
+Dica Pro: Mantenha seus testes atualizados e execute-os frequentemente para garantir a qualidade do seu workflow Git.
+
+
+
+# Git Automation: Otimizando Workflows
+
+```
++------------------------+
+|    Git Automation     |
+|                       |
+| Scripts               |
+| Hooks                 |
+| CI/CD                 |
+|                       |
+| Produtividade         |
++------------------------+
+```
+
+## Fundamentos
+
+### Tipos de Automação
+
+```MERMAID
+mindmap
+    root((Automação))
+        Scripts
+            Shell
+            Python
+        Hooks
+            Pre-commit
+            Post-commit
+        CI/CD
+            Actions
+            Pipelines
+```
+
+## Scripts de Automação
+
+### Workflow Scripts
+
+```BASH
+#!/bin/bash
+# Script de automação de workflow
+automate_workflow() {
+    # Update branches
+    git fetch --all
+    git pull origin main
+    
+    # Clean old branches
+    git branch --merged | grep -v "\*" | xargs -n 1 git branch -d
+    
+    # Run tests
+    ./run_tests.sh
+    
+    # Update dependencies
+    npm update
+}
+```
+
+### Batch Operations
+
+```PYTHON
+def batch_operations():
+    """
+    Operações em lote no Git
+    """
+    repos = get_all_repos()
+    for repo in repos:
+        with cd(repo):
+            update_dependencies()
+            run_tests()
+            create_backup()
+```
+
+## Git Hooks
+
+### Pre-commit Hook
+
+```BASH
+#!/bin/bash
+# .git/hooks/pre-commit
+set -e
+
+echo "🔍 Verificando código..."
+npm run lint
+
+echo "🧪 Executando testes..."
+npm test
+
+echo "📦 Verificando build..."
+npm run build
+```
+
+### Post-commit Hook
+
+```BASH
+#!/bin/bash
+# .git/hooks/post-commit
+set -e
+
+# Notify team
+./notify_team.sh
+
+# Update documentation
+./update_docs.sh
+
+# Run deployment if on main
+if [[ $(git branch --show-current) == "main" ]]; then
+    ./deploy.sh
+fi
+```
+
+## CI/CD Automation
+
+### GitHub Actions
+
+```YAML
+name: Git Automation
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  automate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run Automation
+        run: |
+          ./automate_workflow.sh
+```
+
+### Jenkins Pipeline
+
+```GROOVY
+pipeline {
+    agent any
+    stages {
+        stage('Automate') {
+            steps {
+                sh './automate_workflow.sh'
+            }
+        }
+    }
+}
+```
+
+## Ferramentas
+
+### CLI Tools
+
+```MERMAID
+mindmap
+    root((Tools))
+        Husky
+            Hooks
+            Scripts
+        Commitizen
+            Commits
+            Messages
+        Semantic Release
+            Versioning
+            Changelog
+```
+
+### Integrations
+
+```
++------------------------+
+|    INTEGRATIONS       |
+|                       |
+| • GitHub             |
+| • GitLab             |
+| • Bitbucket          |
+| • Jenkins            |
+| • Travis CI          |
++------------------------+
+```
+
+## Boas Práticas
+
+### Organização
+
+```BASH
+.
+├── scripts/
+│   ├── automation/
+│   ├── hooks/
+│   └── ci/
+├── .github/
+│   └── workflows/
+└── tools/
+    └── automation/
+```
+
+### Logging
+
+```PYTHON
+def log_automation(action, status, message):
+    """
+    Log automation actions
+    """
+    timestamp = datetime.now()
+    log_entry = f"[{timestamp}] {action}: {status} - {message}"
+    logging.info(log_entry)
+```
+
+## Monitoramento
+
+### Métricas
+
+```MERMAID
+graph TD
+    A[Coleta] -->|Dados| B[Análise]
+    B -->|Insights| C[Otimização]
+    C -->|Melhorias| D[Implementação]
+```
+
+### Alertas
+
+```YAML
+alerts:
+  - name: automation_failure
+    condition: status != 'success'
+    channels:
+      - slack
+      - email
+    threshold: 1
+```
+
+## Troubleshooting
+
+### Debug
+
+```BASH
+#!/bin/bash
+# Debug automation
+set -x
+export DEBUG=true
+
+run_automation() {
+    echo "Starting automation..."
+    ./automate_workflow.sh 2>&1 | tee automation.log
+}
+```
+
+### Recovery
+
+```BASH
+#!/bin/bash
+# Recovery script
+recover_automation() {
+    # Backup current state
+    git stash
+    
+    # Reset to last known good state
+    git reset --hard last_good_commit
+    
+    # Retry automation
+    ./automate_workflow.sh
+}
+```
+
+## Próximos Passos
+
+### Tópicos Relacionados
+
+* [Git Testing](git-testing.html)
+
+* [Git CI/CD](null)
+
+* [Git DevOps](git-devops.html)
+
+Tip:
+
+Dica Pro: Automatize tarefas repetitivas, mas mantenha a flexibilidade para casos especiais.
+
+
+
 # Ferramentas Git: Expandindo Suas Capacidades
 
 ```
@@ -11421,7 +12958,7 @@ Dica Pro: Experimente diferentes ferramentas para encontrar o conjunto que melho
 
 
 
-# Interfaces Gráficas Git: Simplificando o Workflow
+# Interfaces Gráficas Git
 
 ```
 +------------------------+
@@ -11620,7 +13157,7 @@ Dica Pro: Combine GUI com linha de comando para maior produtividade - use cada f
 
 
 
-# Extensões Git: Ampliando Funcionalidades
+# Extensões Git
 
 ```
 +------------------------+
@@ -11737,7 +13274,7 @@ Dica Pro: Comece com extensões básicas e adicione mais conforme sua necessidad
 
 
 
-# Git LFS: Large File Storage
+# Git LFS
 
 ```
 +------------------------+
@@ -11858,7 +13395,7 @@ Dica Pro: Use Git LFS desde o início do projeto para arquivos grandes - migrar 
 
 
 
-# Git Credential Helpers: Gerenciamento Seguro de Credenciais
+# Git Credential Helpers
 
 ```
 +------------------------+
@@ -11954,6 +13491,108 @@ graph TD
 Tip:
 
 Dica Pro: Use diferentes credenciais para diferentes repositórios quando necessário por segurança.
+
+
+
+# Hospedagem Git: Plataformas e Soluções
+
+```
++------------------------+
+|    Git Hosting        |
+|                       |
+| Cloud Services       |
+| Self-Hosted         |
+| Features            |
+|                       |
+| Platform Choice     |
++------------------------+
+```
+
+## Plataformas Principais
+
+### Comparativo
+
+```MERMAID
+mindmap
+    root((Hosting))
+        GitHub
+            Actions
+            Packages
+            Pages
+            Codespaces
+        GitLab
+            CI/CD
+            Registry
+            Wiki
+            Issues
+        Bitbucket
+            Pipelines
+            Jira
+            Confluence
+            Bamboo
+```
+
+## Critérios de Escolha
+
+### Fatores Decisivos
+
+```
++------------------------+
+|    CONSIDERAR         |
+|                       |
+| • Custo              |
+| • Integração         |
+| • Escalabilidade     |
+| • Segurança          |
+| • Compliance         |
+| • Suporte            |
++------------------------+
+```
+
+### Comparativo de Preços
+
+```MERMAID
+graph TD
+    A[Preços] --> B[GitHub]
+    A --> C[GitLab]
+    A --> D[Bitbucket]
+    B --> E[Free/Team/Enterprise]
+    C --> F[Free/Premium/Ultimate]
+    D --> G[Free/Standard/Premium]
+```
+
+## Self-Hosted vs Cloud
+
+### Análise
+
+```MERMAID
+mindmap
+    root((Hosting Type))
+        Cloud
+            Managed
+            Scalable
+            Pay-as-you-go
+        Self-Hosted
+            Control
+            Compliance
+            Customization
+```
+
+## Próximos Passos
+
+### Tópicos Relacionados
+
+* [GitHub Specific](github-specific.html)
+
+* [GitLab Specific](gitlab-specific.html)
+
+* [Bitbucket Specific](bitbucket-specific.html)
+
+* [Self-Hosted Git](self-hosted-git.html)
+
+Tip:
+
+Dica Pro: Avalie cuidadosamente as necessidades específicas do seu projeto e equipe antes de escolher uma plataforma.
 
 
 
@@ -16202,6 +17841,197 @@ Dica Pro: Implemente hooks de servidor para forçar políticas de segurança e q
 
 
 
+# Git e DevOps
+
+## Integração Contínua
+
+### Pipeline Básico
+
+```MERMAID
+graph LR
+    A[Git Push] -->|Trigger| B[Build]
+    B -->|Success| C[Test]
+    C -->|Pass| D[Deploy]
+    D -->|Success| E[Monitor]
+```
+
+## Automação
+
+### GitHub Actions
+
+```YAML
+name: CI/CD
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build
+        run: make build
+      - name: Test
+        run: make test
+      - name: Deploy
+        if: github.ref == 'refs/heads/main'
+        run: make deploy
+```
+
+## Infrastructure as Code
+
+### Git + IaC
+
+```MERMAID
+mindmap
+    root((IaC))
+        Terraform
+            State
+            Modules
+        Ansible
+            Playbooks
+            Roles
+        Kubernetes
+            Manifests
+            Helm
+```
+
+## Monitoramento
+
+### Métricas DevOps
+
+```MERMAID
+graph TD
+    A[Código] -->|Git| B[Métricas]
+    B --> C[Lead Time]
+    B --> D[Deploy Frequency]
+    B --> E[MTTR]
+    B --> F[Change Failure]
+```
+
+## Segurança
+
+### DevSecOps
+
+```
++------------------------+
+|     SEGURANÇA         |
+|                       |
+| • SAST              |
+| • DAST              |
+| • SCA               |
+| • IAST              |
+| • Secrets Scan      |
++------------------------+
+```
+
+## Deployment
+
+### Estratégias
+
+```MERMAID
+mindmap
+    root((Deploy))
+        Blue/Green
+            Zero downtime
+            Quick rollback
+        Canary
+            Gradual
+            Monitored
+        Rolling
+            Continuous
+            Resource efficient
+```
+
+## Ferramentas
+
+### Stack DevOps
+
+```MERMAID
+graph TD
+    A[Git] -->|Source| B[Jenkins/GitLab CI]
+    B -->|Build| C[Docker]
+    C -->|Deploy| D[Kubernetes]
+    D -->|Monitor| E[Prometheus]
+```
+
+## Boas Práticas
+
+### Guidelines
+
+1. Trunk-based development
+
+2. Feature flags
+
+3. Automated testing
+
+4. Continuous feedback
+
+5. Infrastructure as Code
+
+### Workflow
+
+```MERMAID
+sequenceDiagram
+    participant D as Dev
+    participant G as Git
+    participant CI as CI/CD
+    participant P as Prod
+    D->>G: Push
+    G->>CI: Trigger
+    CI->>CI: Build & Test
+    CI->>P: Deploy
+```
+
+## Observabilidade
+
+### Componentes
+
+```MERMAID
+mindmap
+    root((Observability))
+        Logs
+            ELK
+            Splunk
+        Métricas
+            Prometheus
+            Grafana
+        Traces
+            Jaeger
+            Zipkin
+```
+
+## Recuperação
+
+### Disaster Recovery
+
+```MERMAID
+graph TD
+    A[Incident] -->|Detect| B[Alert]
+    B -->|Analyze| C[Response]
+    C -->|Fix| D[Recovery]
+    D -->|Learn| E[Improve]
+```
+
+## Próximos Passos
+
+### Tópicos Relacionados
+
+* [CI/CD Integration](ci-cd-integration.html)
+
+* [Git Security](git-security.html)
+
+* [Workflow Automation](workflow-automation.html)
+
+Tip:
+
+Dica Pro: Use feature flags para separar deploy de release e permitir rollback rápido em caso de problemas.
+
+
+
 # Links e Referências
 
 * GIT-SCM.COM. Git - Documentation. Disponível em: [https://git-scm.com/doc](https://git-scm.com/doc).
@@ -16673,6 +18503,158 @@ git bisect start
 git bisect bad
 git bisect good <commit>
 ```
+
+
+
+# Contribuindo para o Git Pie 🤝
+
+## Antes de Começar
+
+Antes de fazer uma contribuição, certifique-se de:
+
+1. Verificar se já não existe uma Issue similar
+
+2. Ler nosso Código de Conduta
+
+3. Entender nossas diretrizes de contribuição
+
+## Como Contribuir
+
+### 1. Preparando o Ambiente
+
+```BASH
+# Clone o repositório
+git clone https://github.com/seu-usuario/git-pie.git
+
+# Entre no diretório
+cd git-pie
+
+# Instale as dependências
+npm install
+```
+
+### 2. Criando uma Nova Feature
+
+```BASH
+# Crie uma nova branch
+git checkout -b feature/nova-funcionalidade
+
+# Faça suas alterações
+# ...
+
+# Commit das mudanças
+git commit -m "feat: adiciona nova funcionalidade"
+
+# Push para seu fork
+git push origin feature/nova-funcionalidade
+```
+
+### 3. Submetendo Alterações
+
+```MERMAID
+graph TD
+    A[Fork] -->|Clone| B[Local]
+    B -->|Branch| C[Desenvolvimento]
+    C -->|Commit| D[Push]
+    D -->|Pull Request| E[Review]
+    E -->|Merge| F[Upstream]
+```
+
+## Tipos de Contribuição
+
+### 1. Documentação 📚
+
+* Correções de texto
+
+* Melhorias na explicação
+
+* Novos exemplos
+
+* Traduções
+
+### 2. Código 💻
+
+* Novos recursos
+
+* Correções de bugs
+
+* Melhorias de performance
+
+* Testes
+
+### 3. Design 🎨
+
+* Melhorias no layout
+
+* Novos diagramas
+
+* Imagens e ilustrações
+
+* Temas e estilos
+
+## Diretrizes
+
+### Commits
+
+Seguimos o padrão Conventional Commits:
+
+```BASH
+feat: nova funcionalidade
+fix: correção de bug
+docs: atualização de documentação
+style: formatação de código
+refactor: refatoração de código
+test: adição/modificação de testes
+chore: alterações em arquivos de build
+```
+
+### Pull Requests
+
+Seu PR deve incluir:
+
+* Descrição clara das mudanças
+
+* Screenshots (se aplicável)
+
+* Referência a Issues relacionadas
+
+* Checklist de alterações
+
+### Código
+
+* Siga o estilo de código do projeto
+
+* Adicione testes quando necessário
+
+* Mantenha a documentação atualizada
+
+* Evite alterações não relacionadas
+
+## Processo de Review
+
+1. Verificação automatizada
+
+2. Review por mantenedores
+
+3. Feedback e ajustes
+
+4. Aprovação e merge
+
+## Reconhecimento
+
+Todos os contribuidores são reconhecidos em nosso arquivo CONTRIBUTORS.md e na documentação do projeto.
+
+## Precisa de Ajuda?
+
+* Abra uma Issue
+
+* Entre em contato com os mantenedores
+
+* Participe de nossas discussões
+
+Tip:
+
+Próximos Passos: Veja nossa [lista de Issues](null) para encontrar algo para trabalhar.
 
 
 
