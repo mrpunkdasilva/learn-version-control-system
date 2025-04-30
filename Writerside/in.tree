@@ -4,7 +4,7 @@
 
 <instance-profile id="in"
                   name="Git Pie: A Arte Ancestral do Versionamento 🥧"
-                  start-page="intro.md">
+                  start-page="welcome.md">
 
     <toc-element topic="welcome.md"/>
     <toc-element topic="intro.md"/>

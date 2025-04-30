@@ -5,27 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8dc9b24-9799-4258-87a2-324d1f1c127f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ARCH/arch.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Writerside/topics/Empty-MD-Topic.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Writerside/topics/contributing.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Writerside/topics/first-steps.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Writerside/topics/git-automation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Writerside/topics/git-debug.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Writerside/topics/git-testing.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Writerside/topics/installation-setup.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Writerside/topics/welcome.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/marketing/linkedin-post.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/marketing/twitter-alternatives.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/marketing/twitter-posts.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/in.tree" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/in.tree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/git-commands.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/git-commands.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/git-credential-helpers.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/git-credential-helpers.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/git-extensions.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/git-extensions.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/git-guis.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/git-guis.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/git-lfs.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/git-lfs.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/intro.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/intro.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webHelpIN2-all.zip" beforeDir="false" afterPath="$PROJECT_DIR$/webHelpIN2-all.zip" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +86,9 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "stardust.markdown.MarkdownSplitEditorSuppressor:keyList": []
   }
 }]]></component>
   <component name="RecentsManager">
@@ -169,7 +152,7 @@
       <workItem from="1745263015368" duration="4361000" />
       <workItem from="1745292808326" duration="758000" />
       <workItem from="1745336952031" duration="302000" />
-      <workItem from="1745964947478" duration="6555000" />
+      <workItem from="1745964947478" duration="10536000" />
     </task>
     <servers />
   </component>
