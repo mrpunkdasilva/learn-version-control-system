@@ -35,7 +35,6 @@ Sem complicação, direto ao ponto.
 • Exemplos reais
 • Boas práticas
 • Automação
-• Enterprise ready
 
 ---
 5/5
