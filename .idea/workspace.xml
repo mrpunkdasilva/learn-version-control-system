@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8dc9b24-9799-4258-87a2-324d1f1c127f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ARCH/social/content-calendar.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ARCH/social/linkedin-tips.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ARCH/social/post-templates.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ARCH/social/twitter-posts.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ARCH/social/twitter-tips.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ARCH/social/linkedin-posts-additional.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ARCH/social/twitter-posts-additional.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ARCH/social/twitter-posts-more.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ARCH/social/twitter-posts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ARCH/social/twitter-posts.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Writerside/cfg/static/customize.css" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/cfg/static/customize.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +140,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26053.12" />
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
       </set>
     </attachedChunks>
   </component>
@@ -162,7 +161,8 @@
       <workItem from="1745964947478" duration="10536000" />
       <workItem from="1745986222907" duration="759000" />
       <workItem from="1746041383634" duration="3562000" />
-      <workItem from="1746138689101" duration="1042000" />
+      <workItem from="1746138689101" duration="1857000" />
+      <workItem from="1746716047500" duration="910000" />
     </task>
     <servers />
   </component>

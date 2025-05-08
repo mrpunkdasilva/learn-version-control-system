@@ -13439,6 +13439,123 @@ Dica Pro: Combine GUI com linha de comando para maior produtividade - use cada f
 
 
 
+# Extensões Git
+
+```
++------------------------+
+|    Git Extensions     |
+|                       |
+| IDE Plugins          |
+| CLI Extensions       |
+| Custom Scripts       |
+|                       |
+| Productivity Tools   |
++------------------------+
+```
+
+## Extensões Populares
+
+### IDE Plugins
+
+```MERMAID
+mindmap
+    root((IDE Plugins))
+        VSCode
+            GitLens
+            Git History
+            Git Graph
+        JetBrains
+            Git4Idea
+            GitToolBox
+        Eclipse
+            EGit
+            Git Flow
+```
+
+### CLI Extensions
+
+```BASH
+# Git Flow
+git flow init
+git flow feature start
+
+# Git Open
+git open
+
+# Git Recent
+git recent
+
+# Git Interactive Rebase Tool
+git rebase -i HEAD~3
+```
+
+## Instalação e Configuração
+
+### Package Managers
+
+```BASH
+# VSCode
+code --install-extension eamodio.gitlens
+
+# npm global
+npm install -g git-open
+
+# Homebrew
+brew install git-flow
+```
+
+### Configuração Manual
+
+```BASH
+# Adicionar ao PATH
+export PATH=$PATH:/caminho/para/extensao
+
+# Configurar alias
+git config --global alias.custom-cmd '!path/to/script.sh'
+```
+
+## Extensões Recomendadas
+
+### Produtividade
+
+```
++------------------------+
+|    RECOMENDADAS       |
+|                       |
+| • GitLens            |
+| • Git Flow           |
+| • Git Open           |
+| • Git Recent         |
+| • Git Interactive    |
++------------------------+
+```
+
+### Integração
+
+```MERMAID
+graph TD
+    A[Git Core] --> B[Extensions]
+    B --> C[IDE Integration]
+    B --> D[CLI Tools]
+    B --> E[Custom Scripts]
+```
+
+## Próximos Passos
+
+### Tópicos Relacionados
+
+* [Git Tools](git-tools.html)
+
+* [Git Workflow](git-workflow.html)
+
+* [IDE Integration](ide-integration.html)
+
+Tip:
+
+Dica Pro: Comece com extensões básicas e adicione mais conforme sua necessidade específica.
+
+
+
 # Git LFS
 
 ```
