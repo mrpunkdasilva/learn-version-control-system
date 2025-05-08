@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8dc9b24-9799-4258-87a2-324d1f1c127f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ARCH/social/tabnews-posts.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ARCH/social/linkedin-tips.md" beforeDir="false" afterPath="$PROJECT_DIR$/ARCH/social/linkedin-tips.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webHelpIN2-all.zip" beforeDir="false" afterPath="$PROJECT_DIR$/webHelpIN2-all.zip" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +181,7 @@
       <workItem from="1746041383634" duration="3562000" />
       <workItem from="1746138689101" duration="1857000" />
       <workItem from="1746716047500" duration="2927000" />
-      <workItem from="1746737131842" duration="2373000" />
+      <workItem from="1746737131842" duration="2996000" />
     </task>
     <servers />
   </component>
