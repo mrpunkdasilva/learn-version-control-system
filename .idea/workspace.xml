@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8dc9b24-9799-4258-87a2-324d1f1c127f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ARCH/social/tabnews-posts.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ARCH/social/twitter-posts-more.md" beforeDir="false" afterPath="$PROJECT_DIR$/ARCH/social/twitter-posts-more.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ARCH/social/linkedin-tips.md" beforeDir="false" afterPath="$PROJECT_DIR$/ARCH/social/linkedin-tips.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webHelpIN2-all.zip" beforeDir="false" afterPath="$PROJECT_DIR$/webHelpIN2-all.zip" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +107,7 @@
       <recent name="$PROJECT_DIR$/Writerside/cfg" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.main.sh">
+  <component name="RunManager" selected="Writerside.Web Archive (in)">
     <configuration name="main.sh" type="ShConfigurationType" temporary="true">
       <option name="SCRIPT_TEXT" value="" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
@@ -181,7 +183,8 @@
       <workItem from="1745986222907" duration="759000" />
       <workItem from="1746041383634" duration="3562000" />
       <workItem from="1746138689101" duration="1857000" />
-      <workItem from="1746716047500" duration="2811000" />
+      <workItem from="1746716047500" duration="2927000" />
+      <workItem from="1746737131842" duration="2373000" />
     </task>
     <servers />
   </component>
