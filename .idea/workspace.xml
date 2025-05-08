@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8dc9b24-9799-4258-87a2-324d1f1c127f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ARCH/social/linkedin-posts-additional.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ARCH/social/twitter-posts-additional.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ARCH/social/twitter-posts-more.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/cfg/static/customize.css" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/cfg/static/customize.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ARCH/social/twitter-posts-more.md" beforeDir="false" afterPath="$PROJECT_DIR$/ARCH/social/twitter-posts-more.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +76,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "Shell Script.main.sh.executor": "Run",
     "Writerside.PDF (in).executor": "Run",
     "Writerside.Web Archive (in).executor": "Run",
     "git-widget-placeholder": "main",
@@ -107,7 +105,22 @@
       <recent name="$PROJECT_DIR$/Writerside/cfg" />
     </key>
   </component>
-  <component name="RunManager" selected="Writerside.Web Archive (in)">
+  <component name="RunManager" selected="Shell Script.main.sh">
+    <configuration name="main.sh" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/scripts/main.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="PDF (in)" type="StardustRunConfiguration" factoryName="build-pdf">
       <option name="addCover" value="true" />
       <option name="addFooter" value="true" />
@@ -133,9 +146,15 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Shell Script.main.sh" />
       <item itemvalue="Writerside.PDF (in)" />
       <item itemvalue="Writerside.Web Archive (in)" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Shell Script.main.sh" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -162,7 +181,7 @@
       <workItem from="1745986222907" duration="759000" />
       <workItem from="1746041383634" duration="3562000" />
       <workItem from="1746138689101" duration="1857000" />
-      <workItem from="1746716047500" duration="910000" />
+      <workItem from="1746716047500" duration="2811000" />
     </task>
     <servers />
   </component>

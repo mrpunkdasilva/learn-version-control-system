@@ -465,3 +465,88 @@ https://mrpunkdasilva.github.io/learn-version-control-system/
 
 #GitPie #CyberSecurity #DevSecOps #SegurançaDeDados
 ```
+
+### Post 3: Git para Equipes Distribuídas
+```
+🌎 GIT PARA EQUIPES DISTRIBUÍDAS: COLABORAÇÃO SEM FRONTEIRAS
+
+Gerenciar equipes remotas traz desafios únicos para o versionamento de código. Veja como o Git pode ser seu aliado:
+
+1️⃣ Fluxos de Trabalho Assíncronos
+• Pull Requests como centro de comunicação
+• Code Reviews estruturados
+• Documentação integrada ao código
+
+2️⃣ Estratégias de Branching
+• Trunk-based para iterações rápidas
+• GitFlow para releases controlados
+• Escolha o modelo adequado à sua equipe
+
+3️⃣ Automação e Visibilidade
+• Status checks automatizados
+• Métricas de contribuição
+• Dashboards de atividade
+
+Implementamos estas práticas em equipes globais com o Git Pie:
+https://mrpunkdasilva.github.io/learn-version-control-system/
+
+#GitPie #RemoteWork #DistributedTeams #DevCollaboration
+```
+
+### Post 4: Git para Monorepos
+```
+📦 MONOREPOS COM GIT: ESCALANDO SEM PERDER PERFORMANCE
+
+Gerenciar repositórios monolíticos traz desafios únicos. Veja como grandes empresas utilizam Git para monorepos:
+
+1️⃣ Otimizações Críticas
+• Sparse-checkout para trabalhar em subdiretórios
+• Shallow clones para histórico parcial
+• Git LFS para arquivos binários
+
+2️⃣ Ferramentas Especializadas
+• Bazel, Buck ou Nx para builds incrementais
+• Ferramentas de análise de dependências
+• Hooks customizados para validações
+
+3️⃣ Estratégias de CI/CD
+• Builds afetados (affected builds)
+• Caching distribuído
+• Paralelização inteligente
+
+Detalhamos todas estas técnicas no Git Pie, nosso guia completo:
+https://mrpunkdasilva.github.io/learn-version-control-system/
+
+#GitPie #Monorepo #ScalableDevelopment #EngenhariaDeSoftware
+```
+
+## Mais Posts para X (Twitter)
+
+### Post 21: Git Aliases
+```
+💡 #GitTip
+
+Cansado de digitar comandos longos?
+
+git config --global alias.st status
+git config --global alias.co checkout
+git config --global alias.br branch
+
+Crie atalhos para seus comandos favoritos!
+
+#GitPie 🥧 https://mrpunkdasilva.github.io/learn-version-control-system/
+```
+
+### Post 22: Git Stash Apply
+```
+💡 #GitTip
+
+Precisa recuperar mudanças sem remover do stash?
+
+git stash apply stash@{2}
+# aplica mudanças mantendo no stash
+
+Ideal para reutilizar o mesmo conjunto de alterações!
+
+#GitPie 🥧 https://mrpunkdasilva.github.io/learn-version-control-system/
+```
