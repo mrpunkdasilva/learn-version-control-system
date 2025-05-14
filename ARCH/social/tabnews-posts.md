@@ -131,7 +131,7 @@ Escolher o workflow Git adequado pode ter um impacto significativo na produtivid
 - Requer excelente cobertura de testes
 - Necessita feature flags para features incompletas
 - Curva de aprendizado para equipes acostumadas com GitFlow
-
+~~~~
 ### Ideal para
 - Equipes com forte cultura de testes
 - Organizações com CI/CD maduro
