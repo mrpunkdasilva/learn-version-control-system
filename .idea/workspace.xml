@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8dc9b24-9799-4258-87a2-324d1f1c127f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ARCH/social/tabnews-posts.md" beforeDir="false" afterPath="$PROJECT_DIR$/ARCH/social/tabnews-posts.md" afterDir="false" />
-    </list>
+    <list default="true" id="f8dc9b24-9799-4258-87a2-324d1f1c127f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,33 +69,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Shell Script.main.sh.executor&quot;: &quot;Run&quot;,
-    &quot;Writerside.PDF (in).executor&quot;: &quot;Run&quot;,
-    &quot;Writerside.Web Archive (in).executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/mrpunkdasilva/WebstormProjects/learn-version-control-system&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.zencoder-patch-add-chat-message-raw-content": "true",
+    "RunOnceActivity.zencoder-patch-generate-chat-message-id": "true",
+    "RunOnceActivity.zencoder-patch-migrate-custom-instruction": "true",
+    "Shell Script.main.sh.executor": "Run",
+    "Writerside.PDF (in).executor": "Run",
+    "Writerside.Web Archive (in).executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/mrpunkdasilva/WebstormProjects/learn-version-control-system",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql_aurora&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql_aurora"
     ],
-    &quot;stardust.markdown.MarkdownSplitEditorSuppressor:keyList&quot;: [
-      &quot;/home/mrpunkdasilva/WebstormProjects/learn-version-control-system/Writerside/topics/intro.md&quot;
+    "stardust.markdown.MarkdownSplitEditorSuppressor:keyList": [
+      "/home/mrpunkdasilva/WebstormProjects/learn-version-control-system/Writerside/topics/intro.md"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Writerside/images" />
@@ -188,6 +188,7 @@
       <workItem from="1746716047500" duration="2927000" />
       <workItem from="1746737131842" duration="3201000" />
       <workItem from="1746740367446" duration="11000" />
+      <workItem from="1747191003174" duration="584000" />
     </task>
     <servers />
   </component>
@@ -204,5 +205,35 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="ai.zencoder.plugin.chat.state">
+    <option name="activeChatId" value="713e41b1-f837-4041-a3bb-dd51ccbd14fb" />
+  </component>
+  <component name="ai.zencoder.plugin.mcp">
+    <option name="internalToolsState" value="{&quot;file_search&quot;:true,&quot;fulltext_search&quot;:true}" />
+  </component>
+  <component name="ai.zencoder.plugin.rag.settings">
+    <option name="desiredChunkSizeBytes" value="4194304" />
+    <option name="forbiddenExtensions">
+      <set>
+        <option value=".log,.lock,.svg" />
+      </set>
+    </option>
+    <option name="pollingIntervalMs" value="60000" />
+    <option name="repoIndexingIntervalMs" value="300000" />
+  </component>
+  <component name="ai.zencoder.plugin.rag.state">
+    <option name="indexedFilesMap">
+      <map>
+        <entry key="$PROJECT_DIR$/.idea/workspace.xml" value="1747191010604" />
+        <entry key="$PROJECT_DIR$/ARCH/social/tabnews-posts.md" value="1747191010604" />
+      </map>
+    </option>
+    <option name="lastCommitHash" value="763d49716119925efbaf81bef9494a9b69a46c12" />
+    <option name="lastIndexTimestamp" value="1747191463965" />
+    <option name="repoAccumulatedChanges" value="4" />
+    <option name="repoTotalFiles" value="228" />
+    <option name="repositoryId" value="f90157a8-b6d6-4746-806a-6447cdbca46d" />
+    <option name="state" value="UPDATING_INDEX" />
   </component>
 </project>

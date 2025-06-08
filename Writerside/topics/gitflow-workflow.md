@@ -96,40 +96,6 @@ gitGraph
     merge hotfix/bug
 ```
 
-## Comandos Essenciais
-
-### 1. Iniciando Gitflow
-```bash
-git flow init
-```
-
-### 2. Features
-```bash
-# Iniciar feature
-git flow feature start login
-
-# Finalizar feature
-git flow feature finish login
-```
-
-### 3. Releases
-```bash
-# Criar release
-git flow release start 1.0.0
-
-# Finalizar release
-git flow release finish 1.0.0
-```
-
-### 4. Hotfixes
-```bash
-# Criar hotfix
-git flow hotfix start bug-critical
-
-# Finalizar hotfix
-git flow hotfix finish bug-critical
-```
-
 ## Fluxo de Trabalho Completo
 
 ```mermaid

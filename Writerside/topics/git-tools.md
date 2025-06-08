@@ -46,21 +46,6 @@ graph TD
     C --> G[Free Features]
 ```
 
-### CLI Enhancers
-```bash
-# Oh My Zsh Git plugins
-git config --global oh-my-zsh.hide-status 0
-git config --global oh-my-zsh.hide-dirty 0
-
-# Git Flow
-git flow init
-git flow feature start nova-feature
-
-# Hub (GitHub CLI)
-hub create
-hub pull-request
-```
-
 ## Extensões Populares
 
 ### IDE Integration

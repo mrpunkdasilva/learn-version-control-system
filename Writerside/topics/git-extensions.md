@@ -30,21 +30,6 @@ mindmap
             Git Flow
 ```
 
-### CLI Extensions
-```bash
-# Git Flow
-git flow init
-git flow feature start
-
-# Git Open
-git open
-
-# Git Recent
-git recent
-
-# Git Interactive Rebase Tool
-git rebase -i HEAD~3
-```
 
 ## Instalação e Configuração
 

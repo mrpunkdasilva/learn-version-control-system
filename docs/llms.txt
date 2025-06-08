@@ -3006,44 +3006,6 @@ gitGraph
     merge hotfix/bug
 ```
 
-## Comandos Essenciais
-
-### 1. Iniciando Gitflow
-
-```BASH
-git flow init
-```
-
-### 2. Features
-
-```BASH
-# Iniciar feature
-git flow feature start login
-
-# Finalizar feature
-git flow feature finish login
-```
-
-### 3. Releases
-
-```BASH
-# Criar release
-git flow release start 1.0.0
-
-# Finalizar release
-git flow release finish 1.0.0
-```
-
-### 4. Hotfixes
-
-```BASH
-# Criar hotfix
-git flow hotfix start bug-critical
-
-# Finalizar hotfix
-git flow hotfix finish bug-critical
-```
-
 ## Fluxo de Trabalho Completo
 
 ```MERMAID
@@ -3876,16 +3838,6 @@ git merge --no-ff hotfix/bug-123
 # Sync develop
 git checkout develop
 git merge --no-ff hotfix/bug-123
-```
-
-### 2. Git Flow
-
-```BASH
-# Iniciar hotfix
-git flow hotfix start bug-123
-
-# Finalizar hotfix
-git flow hotfix finish bug-123
 ```
 
 ## Boas Práticas
@@ -13062,22 +13014,6 @@ graph TD
     C --> G[Free Features]
 ```
 
-### CLI Enhancers
-
-```BASH
-# Oh My Zsh Git plugins
-git config --global oh-my-zsh.hide-status 0
-git config --global oh-my-zsh.hide-dirty 0
-
-# Git Flow
-git flow init
-git flow feature start nova-feature
-
-# Hub (GitHub CLI)
-hub create
-hub pull-request
-```
-
 ## Extensões Populares
 
 ### IDE Integration
@@ -13470,23 +13406,6 @@ mindmap
         Eclipse
             EGit
             Git Flow
-```
-
-### CLI Extensions
-
-```BASH
-# Git Flow
-git flow init
-git flow feature start
-
-# Git Open
-git open
-
-# Git Recent
-git recent
-
-# Git Interactive Rebase Tool
-git rebase -i HEAD~3
 ```
 
 ## Instalação e Configuração

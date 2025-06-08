@@ -119,14 +119,6 @@ git checkout develop
 git merge --no-ff hotfix/bug-123
 ```
 
-### 2. Git Flow
-```bash
-# Iniciar hotfix
-git flow hotfix start bug-123
-
-# Finalizar hotfix
-git flow hotfix finish bug-123
-```
 
 ## Boas Práticas
 
